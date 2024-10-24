@@ -4,15 +4,12 @@ import datetime
 import os
 import uuid
 from hmac import compare_digest
-from io import BytesIO
 from logging import Logger
 from typing import Any, Callable, Dict, List, Optional, Union
 
 import argon2
-import qrcode
 
 # Using svg because it doesn't require additional dependencies
-import qrcode.image.svg
 import two_factor
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.kdf import scrypt
@@ -20,7 +17,6 @@ from db import db
 from encryption import EncryptionManager, GpgKeyNotFoundError
 from flask import url_for
 from flask_babel import gettext, ngettext
-from markupsafe import Markup
 from passphrases import PassphraseGenerator
 from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, LargeBinary, String, Text
 from sqlalchemy.exc import IntegrityError
@@ -39,12 +35,7 @@ def get_one_or_else(
     try:
         return query.one()
     except MultipleResultsFound as e:
-        logger.error(
-            "Found multiple while executing {} when one was expected: {}".format(
-                query,
-                e,
-            )
-        )
+        logger.error(f"Found multiple while executing {query} when one was expected: {e}")
         failure_method(500)
     except NoResultFound as e:
         logger.error(f"Found none when one was expected: {e}")
@@ -91,7 +82,7 @@ class Source(db.Model):
         self.uuid = str(uuid.uuid4())
 
     def __repr__(self) -> str:
-        return "<Source %r>" % (self.journalist_designation)
+        return f"<Source {self.journalist_designation!r}>"
 
     @property
     def journalist_filename(self) -> str:
@@ -198,7 +189,7 @@ class Submission(db.Model):
         self.size = os.stat(storage.path(source.filesystem_id, filename)).st_size
 
     def __repr__(self) -> str:
-        return "<Submission %r>" % (self.filename)
+        return f"<Submission {self.filename!r}>"
 
     @property
     def is_file(self) -> bool:
@@ -258,10 +249,7 @@ class Submission(db.Model):
         If the submission has been downloaded or seen by any journalist, then the submission is
         considered seen.
         """
-        if self.downloaded or self.seen_files.count() or self.seen_messages.count():
-            return True
-
-        return False
+        return bool(self.downloaded or self.seen_files.count() or self.seen_messages.count())
 
 
 class Reply(db.Model):
@@ -296,7 +284,7 @@ class Reply(db.Model):
         self.size = os.stat(storage.path(source.filesystem_id, filename)).st_size
 
     def __repr__(self) -> str:
-        return "<Reply %r>" % (self.filename)
+        return f"<Reply {self.filename!r}>"
 
     def to_json(self) -> "Dict[str, Any]":
         seen_by = [r.journalist.uuid for r in SeenReply.query.filter(SeenReply.reply_id == self.id)]
@@ -327,7 +315,7 @@ class SourceStar(db.Model):
     source_id = Column("source_id", Integer, ForeignKey("sources.id"))
     starred = Column("starred", Boolean, default=True)
 
-    def __eq__(self, other: "Any") -> bool:
+    def __eq__(self, other: object) -> bool:
         if isinstance(other, SourceStar):
             return (
                 self.source_id == other.source_id
@@ -430,7 +418,6 @@ class Journalist(db.Model):
         is_admin: bool = False,
         otp_secret: "Optional[str]" = None,
     ) -> None:
-
         self.check_username_acceptable(username)
         self.username = username
         if first_name:
@@ -615,25 +602,8 @@ class Journalist(db.Model):
             raise ValueError(f"{self} is not using HOTP")
 
     @property
-    def shared_secret_qrcode(self) -> Markup:
-        uri = self.totp.get_provisioning_uri(self.username)
-
-        qr = qrcode.QRCode(box_size=15, image_factory=qrcode.image.svg.SvgPathImage)
-        qr.add_data(uri)
-        img = qr.make_image()
-
-        svg_out = BytesIO()
-        img.save(svg_out)
-        return Markup(svg_out.getvalue().decode("utf-8"))
-
-    @property
     def formatted_otp_secret(self) -> str:
-        """The OTP secret is easier to read and manually enter if it is all
-        lowercase and split into four groups of four characters. The secret is
-        base32-encoded, so it is case insensitive."""
-        sec = self.otp_secret
-        chunks = [sec[i : i + 4] for i in range(0, len(sec), 4)]
-        return " ".join(chunks).lower()
+        return two_factor.format_secret(self.otp_secret)
 
     def verify_2fa_token(self, token: Optional[str]) -> str:
         if not token:
@@ -678,9 +648,8 @@ class Journalist(db.Model):
         )
         if len(attempts_within_period) > cls._MAX_LOGIN_ATTEMPTS_PER_PERIOD:
             raise LoginThrottledException(
-                "throttled ({} attempts in last {} seconds)".format(
-                    len(attempts_within_period), cls._LOGIN_ATTEMPT_PERIOD
-                )
+                f"throttled ({len(attempts_within_period)} attempts in last "
+                f"{cls._LOGIN_ATTEMPT_PERIOD} seconds)"
             )
 
     @classmethod
@@ -884,16 +853,11 @@ class InstanceConfig(db.Model):
 
     def __repr__(self) -> str:
         return (
-            "<InstanceConfig(version={}, valid_until={}, "
-            "allow_document_uploads={}, organization_name={}, "
-            "initial_message_min_len={}, reject_message_with_codename={})>".format(
-                self.version,
-                self.valid_until,
-                self.allow_document_uploads,
-                self.organization_name,
-                self.initial_message_min_len,
-                self.reject_message_with_codename,
-            )
+            f"<InstanceConfig(version={self.version}, valid_until={self.valid_until}, "
+            f"allow_document_uploads={self.allow_document_uploads}, "
+            f"organization_name={self.organization_name}, "
+            f"initial_message_min_len={self.initial_message_min_len}, "
+            f"reject_message_with_codename={self.reject_message_with_codename})>"
         )
 
     def copy(self) -> "InstanceConfig":

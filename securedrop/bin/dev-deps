@@ -22,7 +22,11 @@ function run_xvfb() {
 
 function run_redis() {
     rm -f "${REPOROOT}/securedrop/dump.rdb"
-    setsid redis-server >& /tmp/redis.out || cat /tmp/redis.out
+    redis_password=$(cd "${REPOROOT}/securedrop" && python -c "import rq_config; print(rq_config.REDIS_PASSWORD)")
+    echo "$redis_password" > /tmp/redispasswd
+    echo "requirepass ${redis_password}" | sudo -u redis tee -a /etc/redis/redis.conf
+    echo "Starting redis..."
+    sudo service redis-server start
 }
 
 function setup_vncauth {
@@ -47,6 +51,7 @@ function append_to_exit() {
 function maybe_create_config_py() {
     if ! test -f "${REPOROOT}/securedrop/config.py" ; then
         append_to_exit "rm ${REPOROOT}/securedrop/config.py"
+        append_to_exit "rm ${REPOROOT}/securedrop/rq_config.py"
         (cd "$REPOROOT" && make test-config)
     fi
 }
@@ -170,17 +175,20 @@ function reset_demo() {
 }
 
 function build_redwood() {
+    source /etc/os-release
     # For the demo, we build the wheel at container build time instead of
     # during launch, so skip this part
     if [[ -z "${SKIP_REDWOOD_BUILD:-}" ]]; then
         # Create a debug build of redwood and install it in the app-code virtualenv
         # TODO: add live reload support
         # We tell cargo to put its registry/crate cache and build cache in the target/ folder so
-        # it persists instead of being recreated from scratch each time the container starts.
+        # it persists instead of being recreated from scratch each time the container starts. The
+        # cache needs to be split across OS versions because it can't tell that it's supposed to
+        # link to a different libssl version.
         # n.b. we can't re-use the host's caches because of permission differences
         PATH="$PATH:/opt/cargo/bin/" \
         CARGO_HOME="${REPOROOT}/target/cargo-dev" \
-            python3 "${REPOROOT}/redwood/build-wheel.py" --redwood "${REPOROOT}/redwood" --target "${REPOROOT}/target/dev"
+            python3 "${REPOROOT}/redwood/build-wheel.py" --redwood "${REPOROOT}/redwood" --target "${REPOROOT}/target/dev-${VERSION_CODENAME}"
         /opt/venvs/securedrop-app-code/bin/pip install "${REPOROOT}"/redwood/redwood-*.whl
     fi
 }

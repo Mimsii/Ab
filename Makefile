@@ -29,27 +29,7 @@ update-admin-pip-requirements:  ## Update admin requirements.
 .PHONY: update-python3-requirements
 update-python3-requirements:  ## Update Python 3 requirements with pip-compile.
 	@echo "███ Updating Python 3 requirements files..."
-	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
-		--allow-unsafe \
-		--output-file requirements/python3/develop-requirements.txt \
-		requirements/python3/translation-requirements.in \
-		requirements/python3/develop-requirements.in
-	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
-		--allow-unsafe \
-		--output-file requirements/python3/test-requirements.txt \
-		requirements/python3/test-requirements.in
-	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
-				--allow-unsafe \
-		--output-file requirements/python3/requirements.txt \
-		requirements/python3/requirements.in
-	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
-		--allow-unsafe \
-		--output-file requirements/python3/bootstrap-requirements.txt \
-		requirements/python3/bootstrap-requirements.in
-	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
-		--allow-unsafe \
-		--output-file requirements/python3/translation-requirements.txt \
-		requirements/python3/translation-requirements.in
+	@$(SDBIN)/update-requirements
 
 .PHONY: update-pip-requirements
 update-pip-requirements: update-admin-pip-requirements update-python3-requirements ## Update all requirements with pip-compile.
@@ -60,16 +40,6 @@ update-pip-requirements: update-admin-pip-requirements update-python3-requiremen
 # Static analysis
 #
 #################
-
-.PHONY: check-black
-check-black: ## Check Python source code formatting with black
-	@echo "███ Running black check..."
-	@black --check --diff .
-	@echo
-
-.PHONY: black
-black: ## Update Python source code formatting with black
-	@black securedrop .
 
 .PHONY: ansible-config-lint
 ansible-config-lint: ## Run custom Ansible linting tasks.
@@ -94,14 +64,18 @@ app-lint-full: ## Test pylint compliance, with no checks disabled.
 	@echo
 
 .PHONY: check-ruff
-check-ruff:  ## Lint Python source files.
+check-ruff:  ## Check linting and formatting of Python source files.
 	@echo "███ Running ruff..."
-	@ruff check . --show-source
+	@ruff format . --diff
+	@ruff check .
 	@echo
 
 .PHONY: ruff
 ruff: ## Update Python source file formatting.
+	@ruff format .
 	@ruff check . --fix
+
+fix: ruff ## Apply automatic fixes.
 
 # The --disable=names is required to use the BEM syntax
 # # https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
@@ -139,7 +113,7 @@ yamllint:  ## Lint YAML files (does not validate syntax!).
 # While the order mostly doesn't matter here, keep "check-ruff" first, since it
 # gives the broadest coverage and runs (and therefore fails) fastest.
 .PHONY: lint
-lint: check-ruff ansible-config-lint app-lint check-black html-lint shellcheck typelint yamllint check-strings check-supported-locales check-desktop-files ## Runs all lint checks
+lint: check-ruff ansible-config-lint app-lint html-lint shellcheck typelint yamllint check-strings check-supported-locales check-desktop-files ## Runs all lint checks
 
 .PHONY: safety
 safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
@@ -206,6 +180,7 @@ safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
 		--ignore 71680 \
 		--ignore 71681 \
 		--ignore 71684 \
+		--ignore 73302 \
 		--full-report -r $$req_file \
 		&& echo -e '\n' \
 		|| exit 1; \
@@ -239,19 +214,7 @@ rust-audit:
 
 securedrop/config.py: ## Generate the test SecureDrop application config.
 	@echo "███ Generating securedrop/config.py..."
-	@cd securedrop && source_secret_key=$(shell head -c 32 /dev/urandom | base64) \
-	journalist_secret_key=$(shell head -c 32 /dev/urandom | base64) \
-	scrypt_id_pepper=$(shell head -c 32 /dev/urandom | base64) \
-	scrypt_gpg_pepper=$(shell head -c 32 /dev/urandom | base64) \
-	python -c 'import os; from jinja2 import Environment, FileSystemLoader; \
-		 env = Environment(loader=FileSystemLoader(".")); \
-		 ctx = {"securedrop_app_gpg_fingerprint": "65A1B5FF195B56353CC63DFFCC40EF1228271441"}; \
-		 ctx.update(dict((k, {"stdout":v}) for k,v in os.environ.items())); \
-		 ctx = open("config.py", "w").write(env.get_template("config.py.example").render(ctx))'
-	@echo >> securedrop/config.py
-	@echo "SUPPORTED_LOCALES = $$(make --quiet supported-locales)" >> securedrop/config.py
-	@echo "SUPPORTED_LOCALES.append('en_US')" >> securedrop/config.py
-	@echo
+	@./securedrop/bin/dev-config
 
 HOOKS_DIR=.githooks
 

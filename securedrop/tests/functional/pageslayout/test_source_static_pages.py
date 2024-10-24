@@ -7,7 +7,7 @@ from tests.functional.web_drivers import WebDriverTypeEnum, get_web_driver
 from version import __version__
 
 
-@pytest.mark.pagelayout()
+@pytest.mark.pagelayout
 class TestSourceAppStaticPages:
     @pytest.mark.parametrize("locale", list_locales())
     def test_notfound(self, locale, sd_servers):
@@ -51,6 +51,6 @@ class TestSourceAppStaticPages:
 
         # Then it succeeds and the right information is returned
         returned_data = response.json()
-        assert returned_data["server_os"] == "20.04"
+        assert returned_data["server_os"] in ["20.04", "24.04"]
         assert returned_data["sd_version"] == __version__
         assert returned_data["gpg_fpr"]

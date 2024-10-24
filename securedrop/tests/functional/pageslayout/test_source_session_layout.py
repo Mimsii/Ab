@@ -36,7 +36,7 @@ def sd_servers_with_short_timeout(
 
 
 @pytest.mark.parametrize("locale", list_locales())
-@pytest.mark.pagelayout()
+@pytest.mark.pagelayout
 class TestSourceAppSessionTimeout:
     def test_source_session_timeout(self, locale, sd_servers_with_short_timeout):
         # Given an SD server with a very short session timeout
@@ -61,7 +61,9 @@ class TestSourceAppSessionTimeout:
             notification = navigator.driver.find_element(By.CLASS_NAME, "error")
             assert notification.text
             if locale == "en_US":
-                expected_text = "You were logged out due to inactivity."
+                expected_text = (
+                    "You have been logged out due to inactivity or a problem with your session."
+                )
                 assert expected_text in notification.text
 
             save_static_data(navigator.driver, locale, "source-session_timeout")

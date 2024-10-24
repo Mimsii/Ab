@@ -3,7 +3,6 @@ ansible-lint>=4.2.0
 ansible==6.7.0
 ansible-compat<3.0.0
 argon2_cffi>=20.1.0
-black>=24.3.0
 cffi>=1.16.0
 cryptography>=41.0.5  # >= OpenSSL 3.1.4 for CVE-2023-5363
 diffoscope
@@ -14,25 +13,23 @@ html-linter
 importlib-resources
 jinja2>=3.1.3
 markupsafe>=2.1.2
-molecule>=3.0.1,<3.0.3
-molecule-vagrant==0.3
+molecule>=3.0.1,<4
+molecule-vagrant>=1,<2
 # Needed for ansible network filter
 # http://docs.ansible.com/ansible/latest/playbooks_filters_ipaddr.html
 netaddr
-# Now also pin pip due to https://github.com/jazzband/pip-tools/issues/853
-pip>=21.3
-pip-tools>=6.1.0
+pip>=24.2
 polib
 prompt_toolkit==2.0.9
 psutil>=5.6.6
-pylint>=2.7.0
+pylint>=3
 # pyenchant is via pylint[spelling]
 pyenchant>=3.2.1
 pynacl>=1.4.0
 pytest>=7.2.0
 pytest-xdist>=3.0.2
 python-vagrant
-pyyaml>=5.4.1
+pyyaml>=6.0.1
 requests>=2.31.0
 ruamel.yaml>=0.16.10
 ruff
@@ -40,8 +37,9 @@ safety>2.2.0
 semgrep>=1.57.0
 setuptools>=70.0.0
 shellcheck-py
-six==1.15.0
+six>=1.16.0
 testinfra>=5.3.1
 translate-toolkit
 urllib3>=1.26.5
+uv
 yamllint

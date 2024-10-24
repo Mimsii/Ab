@@ -11,7 +11,6 @@ RUN apt-get -y update && apt-get upgrade -y && apt-get install -y \
         debhelper \
         devscripts \
         dh-python \
-        dh-systemd \
         gdb \
         git \
         gnupg2 \
@@ -27,14 +26,13 @@ RUN apt-get -y update && apt-get upgrade -y && apt-get install -y \
         python3-venv \
         python3-virtualenv \
         rsync \
-        sqlite \
         sudo \
         tzdata \
         libevent-dev \
         unzip \
         zlib1g-dev
 
-ENV RUST_VERSION 1.78.0
+ENV RUST_VERSION 1.81.0
 ENV RUSTUP_VERSION 1.24.3
 ENV RUSTUP_INIT_SHA256 3dc5ef50861ee18657f9db2eeb7392f9c2a6c95c90ab41e45ab4ca71476b4338
 ENV RUSTUP_HOME /opt/rustup

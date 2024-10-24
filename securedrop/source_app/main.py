@@ -169,9 +169,9 @@ def make_blueprint(config: SecureDropConfig) -> Blueprint:
                 )
                 reply.decrypted = decrypted_reply
             except UnicodeDecodeError:
-                current_app.logger.error("Could not decode reply %s" % reply.filename)
+                current_app.logger.error(f"Could not decode reply {reply.filename}")
             except FileNotFoundError:
-                current_app.logger.error("Reply file missing: %s" % reply.filename)
+                current_app.logger.error(f"Reply file missing: {reply.filename}")
             except (GpgDecryptError, RedwoodError) as e:
                 current_app.logger.error(f"Could not decrypt reply {reply.filename}: {str(e)}")
             else:
@@ -253,9 +253,8 @@ def make_blueprint(config: SecureDropConfig) -> Blueprint:
 
         if not os.path.exists(Storage.get_default().path(logged_in_source.filesystem_id)):
             current_app.logger.debug(
-                "Store directory not found for source '{}', creating one.".format(
-                    logged_in_source_in_db.journalist_designation
-                )
+                f"Store directory not found for source "
+                f"'{logged_in_source_in_db.journalist_designation}', creating one."
             )
             os.mkdir(Storage.get_default().path(logged_in_source.filesystem_id))
 
@@ -406,8 +405,9 @@ def make_blueprint(config: SecureDropConfig) -> Blueprint:
 
         return redirect(url_for(".lookup", from_login="1"))
 
-    @view.route("/logout")
-    def logout() -> Union[str, werkzeug.Response]:
+    @view.route("/logout", methods=("POST",))
+    @login_required
+    def logout(logged_in_source: SourceUser) -> Union[str, werkzeug.Response]:
         """
         If a user is logged in, show them a logout page that prompts them to
         click the New Identity button in Tor Browser to complete their session.
