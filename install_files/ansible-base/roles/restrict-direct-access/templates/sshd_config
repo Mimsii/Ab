@@ -21,8 +21,8 @@ StrictModes yes
 RSAAuthentication yes
 PubkeyAuthentication yes
 PasswordAuthentication no
-# Only users in the ssh group to authenticate
-AllowGroups ssh
+# Only users in the sdssh group to authenticate
+AllowGroups sdssh
 # Don't use host-based authentication
 IgnoreRhosts yes
 RhostsRSAAuthentication no

@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 1.3.0~rc1\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2023-10-14 20:30+0000\n"
-"Last-Translator: \"Igor K.\" <igorkrainovic@gmail.com>\n"
-"Language-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/securedrop/hr/>\n"
-"Language: hr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.18.2\n"
-"Generated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 1.3.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2024-12-12 09:33+0000\nLast-Translator: Milo Ivir <mail@milotype.de>\nLanguage-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/securedrop/hr/>\nLanguage: hr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 5.8.4\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Ime je predugačko"
@@ -37,7 +25,7 @@ msgid "{time} ago"
 msgstr "prije {time}"
 
 msgid "You have been logged out due to inactivity or a problem with your session."
-msgstr ""
+msgstr "Odjavljeni ste zbog neaktivnosti ili problema s Vašom sesijom."
 
 msgid "SecureDrop"
 msgstr "SecureDrop"
@@ -384,7 +372,7 @@ msgid "No users to display"
 msgstr "Nema korisnika za prikaz"
 
 msgid "Update instance configuration"
-msgstr ""
+msgstr "Ažuriraj konfiguraciju instance"
 
 msgid "INSTANCE CONFIG"
 msgstr "KONFIGURACIJA INSTANCE"
@@ -431,6 +419,12 @@ msgstr "Skoro ste gotovi! Kako bi dovršili dodavanje novog korisnika, uputite g
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Ne možete skenirati barkod? Možete ručno upariti FreeOTP s ovim računom tako da unesete sljedeću dvofaktorsku tajnu u aplikaciju:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Kritično:</strong>&nbsp;&nbsp;Operativni sustav Vašeg SecureDrop poslužitelja je došao do kraja podrške. Potrebno je ručno ažuriranje kako bi se omogućilo sučelje za izvore i kako bi ostali sigurni. Molimo kontaktirajte svog administratora.<a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Saznaj više</a>"
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Važno:</strong>&nbsp;&nbsp; Vaš SecureDrop poslužitelj zahtjeva ručno rješavanje problema sa blokiranim automatskim nadogradnjama na novu verziju operativnog sustava. Molimo kontaktirajte svog administratora. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Saznaj više</a>"
+
 msgid "Navigation"
 msgstr "Navigacija"
 
@@ -447,7 +441,7 @@ msgid "Log Out"
 msgstr "Odjava"
 
 msgid "Return to All Sources"
-msgstr ""
+msgstr "Vrati se na Sve izvore"
 
 msgid "Powered by <b>SecureDrop {version}</b>."
 msgstr "Powered by <b>SecureDrop {version}</b>."
@@ -462,13 +456,13 @@ msgid "All messages, files, and replies from sources are stored as encrypted fil
 msgstr "Svi dokumenti, datoteke i odgovori izvora se spremaju kao enkriptirane datoteke zbog sigurnosti. Kako bi ih čitali, morate ih dekriptirati na svojoj Stanici za sigurno pregledavanje."
 
 msgid "Download Selected Files"
-msgstr ""
+msgstr "Preuzmi odabrane datoteke"
 
 msgid "Download Selected"
 msgstr "Preuzmi odabrano"
 
 msgid "Delete Selected Files"
-msgstr ""
+msgstr "Obriši odabrane datoteke"
 
 msgid "Delete Selected"
 msgstr "Obriši odabrano"
@@ -519,7 +513,7 @@ msgid "This source has no encryption key."
 msgstr "Ovaj izvor nema enkripcijski ključ."
 
 msgid "An encryption key will be generated for the source the next time they log in, after which you will be able to reply to the source here."
-msgstr "Sljedeći put kad se izvor prijavi generirat će mu se enkripcijski ključ, nakon čega će te mu moći odgovarati ovdje."
+msgstr "Sljedeći put kad se izvor prijavi generirat će se njegov ključ za šifriranje, nakon čega ćete ovdje moći odgovoriti izvoru."
 
 msgid "Delete Source Account"
 msgstr "Obriši račun izvora"
@@ -569,7 +563,7 @@ msgid "SET ORGANIZATION NAME"
 msgstr "POSTAVITE IME ORGANIZACIJE"
 
 msgid "Logo Image"
-msgstr "Slika loga"
+msgstr "Slika logotipa"
 
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr "Ovdje možete ažurirati sliku koja se prikazuje na SecureDrop web sučeljima:"
@@ -698,25 +692,25 @@ msgid "Reset Security Key Credentials"
 msgstr "Ponovno postavi vjerodajnice sigurnosnog ključa"
 
 msgid "Download Selected Unread Submissions"
-msgstr ""
+msgstr "Preuzmi odabrane nepročitane predaje"
 
 msgid "Download Unread"
 msgstr "Preuzmi nepročitano"
 
 msgid "Download Selected Submissions"
-msgstr ""
+msgstr "Preuzmi odabrane predaje"
 
 msgid "Download"
 msgstr "Preuzmi"
 
 msgid "Star Selected Submissions"
-msgstr ""
+msgstr "Označi zvijezdom"
 
 msgid "Star"
 msgstr "Stavi zvijezdu"
 
 msgid "Un-star Selected Submissions"
-msgstr ""
+msgstr "Makni zvijezdu"
 
 msgid "Un-star"
 msgstr "Ukloni zvijezdu"
@@ -733,8 +727,8 @@ msgstr "Poruke"
 msgid "Date"
 msgstr "Datum"
 
-msgid "There are no submissions!"
-msgstr "Nema predaja!"
+msgid "There are no submissions."
+msgstr "Nema predaja."
 
 msgid "Filter by codename"
 msgstr "Filtriraj po kodnom imenu"
@@ -770,16 +764,16 @@ msgid "Show password"
 msgstr "Pokaži lozinku"
 
 msgid "Log In to Journalist Interface"
-msgstr ""
+msgstr "Prijavi se na novinarsko sučelje"
 
 msgid "LOG IN"
 msgstr "Prijava"
 
 msgid "Field must be 1 character long."
 msgid_plural "Field must be between 1 and {max_codename_len} characters long."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Polje mora biti {max_codename_len} znak dugo."
+msgstr[1] "Polje mora biti između 1 i {max_codename_len} znaka dugo."
+msgstr[2] "Polje mora biti između 1 i {max_codename_len} znakova dugo."
 
 msgid "Invalid input."
 msgstr "Neispravan unos."
@@ -848,7 +842,7 @@ msgid "Important"
 msgstr "Važno"
 
 msgid "You have been logged out due to inactivity or a problem with your session. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr ""
+msgstr "Odjavljeni ste zbog naktivnosti ili problema s Vašom sesijom. Kliknite {icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> gumb u svom Tor Browser-u prije nego nastavite. Ovo će očistiti Tor Browser aktivnost na ovom uređaju."
 
 msgid "Protecting Journalists and Sources"
 msgstr "Zaštita novinara i izvora"
@@ -857,10 +851,10 @@ msgid "Skip to notification"
 msgstr "Prijeđi na obavijest"
 
 msgid "Return to Submission Page"
-msgstr ""
+msgstr "Vrati se na stranicu predaja"
 
 msgid "Return to Home Page"
-msgstr ""
+msgstr "Vrati se na početnu stranicu"
 
 msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Žao nam je, naš SecureDrop je trenutno nedostupan."
@@ -905,10 +899,10 @@ msgid "<strong>Keep it safe.</strong> There is no account recovery option."
 msgstr "<strong>Držite ga sigurnim.</strong> Ne postoji opcija za oporavak računa."
 
 msgid "Continue to Submission Page"
-msgstr ""
+msgstr "Nastavi na stranicu objava"
 
 msgid "Welcome"
-msgstr "Dobrodošli"
+msgstr "Dobro došli"
 
 msgid "Your Tor Browser's <a id=\"disable-js\" href=\"\"><b>Security Level</b></a> is too low. Use the <img src=\"{icon}\" alt=\"&quot;Security Level&quot;\"> button in your browser’s toolbar to change it."
 msgstr "<a id=\"disable-js\" href=\"\"><b>Razina sigurnosti</b></a> Vašeg Tor preglednika je preniska. Za mijenjanje razine koristite gumb <img src=\"{icon}\" alt=\"&quot;Razina sigurnosti&quot;\"> u alatnoj traci Vašeg preglednika."
@@ -932,7 +926,7 @@ msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</stron
 msgstr "<strong>Preporučuje se korištenje Tor preglednika za pristup SecureDrop-u:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Saznajte kako ga instalirati</a> ili zanemarite ovo upozorenje i nastavite."
 
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a class=\"recommend-tor\" aria-label=\"Learn how to install Tor Browser\" href=\"{tor_browser_url}\" >Learn how to install it</a>, or ignore this warning to continue."
-msgstr ""
+msgstr "<strong>Predlažemo da koristite dekstop verziju Tor Browser-a za pristup na SecureDrop, jer Orfox ne daje istu razinu sigurnosti i anonimnosti kao desktop verzija.</strong><a class=\"recommend-tor\" aria-label=\"Learn how to install Tor Browser\" href=\"{tor_browser_url}\" >Naučite kako instalirati</a>, ili ignorirajte ovo upozorenje kako bi nastavili."
 
 msgid "{} logo"
 msgstr "{} logo"
@@ -944,7 +938,7 @@ msgid "First time submitting to our SecureDrop? Start here."
 msgstr "Prvi put predajete na SecureDrop? Počnite ovdje."
 
 msgid "Get Started With Your First Submission"
-msgstr ""
+msgstr "Počnite s prvom predajom"
 
 msgid "GET STARTED"
 msgstr "Počnite"
@@ -956,7 +950,7 @@ msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Već imate kodno ime? Provjerite odgovore ili predajte nešto novo."
 
 msgid "Log In Using Your Codename"
-msgstr ""
+msgstr "Prijavite se koristeći kodno ime"
 
 msgid "Log in"
 msgstr "Prijavite se"
@@ -968,7 +962,7 @@ msgid "Enter your codename"
 msgstr "Unesite svoje kodno ime"
 
 msgid "Cancel and Return to Previous Page"
-msgstr ""
+msgstr "Otkaži i vrati se na prošlu stranicu"
 
 msgid "CANCEL"
 msgstr "Otkaži"
@@ -977,7 +971,7 @@ msgid "Additional Action Required"
 msgstr "Zahtijeva dodatnu radnju"
 
 msgid "Log Back In"
-msgstr ""
+msgstr "Prijavi se natrag"
 
 msgid "One more thing..."
 msgstr "Još jedna stvar..."
@@ -1013,10 +1007,10 @@ msgid "Anti-spam check. Do not fill this in!"
 msgstr "Anti-spam provjera. Ovo nemojte ispuniti!"
 
 msgid "Cancel and Clear Uploaded Content"
-msgstr ""
+msgstr "Otkaži i očisti postavljeni sadržaj"
 
 msgid "Submit Uploaded Content"
-msgstr ""
+msgstr "Predaj postavljeni sadržaj"
 
 msgid "Read Replies"
 msgstr "Pročitajte odgovore"
@@ -1031,7 +1025,7 @@ msgid "Delete reply from {timestamp}?"
 msgstr "Obrisati odgovor od {timestamp}?"
 
 msgid "Delete Reply"
-msgstr ""
+msgstr "Obriši odgovor"
 
 msgid "Delete All Replies"
 msgstr "Obriši sve odgovore"
@@ -1055,7 +1049,7 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Oprostite, ne možemo naći što ste tražili."
 
 msgid "Warning: Proxy Detected"
-msgstr ""
+msgstr "Upozorenje: Proxy otkriven"
 
 msgid "Proxy Service Detected"
 msgstr "Otkriven je proxy servis"
@@ -1069,8 +1063,8 @@ msgstr "Svatko tko prati Vaš internetski promet &mdash; uključujući Vašu vla
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Uvijek koristite Tor preglednik (<code>{}</code>) za pristup SecureDrop-u. Valjane adrese SecureDrop stranica završavaju s <code>.onion</code>. Točna adresa za ovu stranicu je:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Ako već koristite Tor preglednik, kopirajte gornju adresu i generirajte novi identitet prije pristupanja SecureDrop-u."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr "Ako već koristite Tor Browser, kopirajte adresu iznad i kliknite na <strong>New Identity</strong> gumb u Tor Browser-u prije nego pristupite SecureDrop-u."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Ako postoji rizik da se Vaš internetski promet nadzire, razmotrite spajanje sa druge lokacije ili mreže."
@@ -1097,7 +1091,7 @@ msgid "Codename"
 msgstr "Kodno ime"
 
 msgid "Reveal Codename"
-msgstr ""
+msgstr "Otkrij kodno ime"
 
 msgid "Show Codename"
 msgstr "Pokaži kodno ime"
@@ -1109,7 +1103,7 @@ msgid "SecureDrop encrypts files and messages after they are submitted. Encrypti
 msgstr "SecureDrop enkriptira datoteke i poruke nakon što su predani. Enkripcija poruka i datoteka prije predaje može pružiti dodatni sloj sigurnosti prije nego Vaši podaci dođu do SecureDrop poslužitelja."
 
 msgid "If you are already familiar with the GPG encryption software, you may wish to encrypt your submissions yourself. To do so:"
-msgstr "Ako ste već upoznati s GPG enkripcijskim software-om, možda želite enkriptirati svoje predaje sami. Kako bi ste to napravili:"
+msgstr "Ako ste već upoznati sa softverom GPG-šifriranja, možda želite šifrirati svoje predaje sami. Kako biste to napravili:"
 
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file called:\n"
@@ -1141,6 +1135,12 @@ msgstr "<strong>Važno:</strong> Ako želite ostati anonimni, <strong>nemojte</s
 
 msgid "Back to submission page"
 msgstr "Natrag na stranicu predaje"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Nema predaja!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Ako već koristite Tor preglednik, kopirajte gornju adresu i generirajte novi identitet prije pristupanja SecureDrop-u."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "Odjavljeni ste zbog neaktivnosti. Pritisnite gumb <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Novi identitet</b> u alatnoj traci vašeg Tor preglednika prije nego što nastavite. Ovo će obrisati Vaše podatke o aktivnosti u Tor pregledniku na ovom uređaju."

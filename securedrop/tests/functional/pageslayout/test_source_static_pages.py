@@ -12,10 +12,9 @@ class TestSourceAppStaticPages:
     @pytest.mark.parametrize("locale", list_locales())
     def test_notfound(self, locale, sd_servers):
         # Given a source user accessing the app from their browser
-        locale_with_commas = locale.replace("_", "-")
         with get_web_driver(
             web_driver_type=WebDriverTypeEnum.TOR_BROWSER,
-            accept_languages=locale_with_commas,
+            accept_languages=locale,
         ) as tor_browser_web_driver:
             # When they try to access a page that does not exist
             tor_browser_web_driver.get(f"{sd_servers.source_app_base_url}/does_not_exist")
@@ -29,10 +28,9 @@ class TestSourceAppStaticPages:
     @pytest.mark.parametrize("locale", list_locales())
     def test_static_pages(self, locale, sd_servers):
         # Given a source user accessing the app from their browser
-        locale_with_commas = locale.replace("_", "-")
         with get_web_driver(
             web_driver_type=WebDriverTypeEnum.TOR_BROWSER,
-            accept_languages=locale_with_commas,
+            accept_languages=locale,
         ) as tor_browser_web_driver:
             # The user can browse to some of the app's static pages
             tor_browser_web_driver.get(f"{sd_servers.source_app_base_url}/use-tor")

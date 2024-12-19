@@ -82,7 +82,7 @@ fix: ruff ## Apply automatic fixes.
 .PHONY: html-lint
 html-lint:  ## Validate HTML in web application template files.
 	@echo "███ Linting application templates..."
-	@html_lint.py --printfilename --disable=optional_tag,extra_whitespace,indentation,names,quotation \
+	@html_lint.py --printfilename --disable=optional_tag,extra_whitespace,indentation,names,quotation,protocol \
 		securedrop/source_templates/*.html securedrop/journalist_templates/*.html
 	@echo
 
@@ -181,6 +181,9 @@ safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
 		--ignore 71681 \
 		--ignore 71684 \
 		--ignore 73302 \
+		--ignore 73711 \
+		--ignore 73889 \
+		--ignore 73969 \
 		--full-report -r $$req_file \
 		&& echo -e '\n' \
 		|| exit 1; \
@@ -426,9 +429,10 @@ $(DESKTOP_POT): ${DESKTOP_BASE}/*.in
 		--output-file $@
 	@rm ${DESKTOP_LOCALE_DIR}/*.po
 
-# Render desktop list from "i18n.json".
+# Render the list of desktop locales from those in entries "i18n.json" that
+# include a "desktop" key.
 $(DESKTOP_I18N_CONF):
-	@jq --raw-output '.supported_locales[].desktop' ${I18N_CONF} > $@
+	@jq --raw-output '.supported_locales[].desktop | values' ${I18N_CONF} > $@
 
 ## Supported locales
 

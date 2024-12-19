@@ -1,0 +1,12 @@
+[package]
+name = "noble-migration"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.93"
+rustix = { version = "0.38.40", features = ["process"] }
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1.0.132"
+url = "2.5.3"
+walkdir = "2.5.0"

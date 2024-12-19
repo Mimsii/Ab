@@ -4,7 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2024-09-25 14:33+0000\nLast-Translator: kwadronaut <kwadronaut@autistici.org>\nLanguage-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.7.1\nGenerated-By: Babel 2.4.0\n"
+msgstr ""
+"Project-Id-Version: SecureDrop 0.3.12\n"
+"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
+"POT-Creation-Date: 2017-09-02 07:28+0000\n"
+"PO-Revision-Date: 2024-09-25 14:33+0000\n"
+"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.7.1\n"
+"Generated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Naam is te lang"
@@ -409,6 +422,12 @@ msgstr "U bent bijna klaar! Om het toevoegen van deze nieuwe gebruiker af te ron
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Lukt het niet de barcode te scannen? U kunt handmatig FreeOTP aan dit account linken door onderstaande authenticatiecode in de applicatie in te voeren:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
 msgid "Navigation"
 msgstr "Navigatie"
 
@@ -711,8 +730,8 @@ msgstr "Bericht"
 msgid "Date"
 msgstr "Datum"
 
-msgid "There are no submissions!"
-msgstr "Er zijn geen inzendingen!"
+msgid "There are no submissions."
+msgstr ""
 
 msgid "Filter by codename"
 msgstr "Filter op codenaam"
@@ -1046,8 +1065,8 @@ msgstr "Iedereen die uw internetverkeer controleert, inclusief uw overheid, uw i
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Gebruik altijd de Tor Browser (<code>{}</code>) om SecureDrop te bezoeken. Geldige SecureDrop website adressen eindigen op <code>.onion</code>. Het juiste adres voor deze site:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Als u Tor Browser al gebruikt, kopieert u het bovenstaande adres en genereert u een nieuwe identiteit voordat u SecureDrop opent."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr ""
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Als er een redelijk risico bestaat dat uw internetverkeer wordt gecontroleerd, kunt u overwegen verbinding te maken vanaf een andere locatie of een ander netwerk."
@@ -1118,6 +1137,12 @@ msgstr "<strong>Belangrijk:</strong> Als u anoniem wilt blijven, gebruik dan <st
 
 msgid "Back to submission page"
 msgstr "Terug naar inzendingenpagina"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Er zijn geen inzendingen!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Als u Tor Browser al gebruikt, kopieert u het bovenstaande adres en genereert u een nieuwe identiteit voordat u SecureDrop opent."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "U bent uitgelogd vanwege inactiviteit. Klik op de <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nieuwe identiteit</b>-knop in de werkbalk van uw Tor Browser voordat u verder gaat. Hierdoor wordt uw Tor Browser geschiedenis van dit apparaat gewist."

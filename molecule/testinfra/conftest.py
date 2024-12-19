@@ -31,7 +31,6 @@ def securedrop_import_testinfra_vars(hostname, with_header=False):
     hostvars["securedrop_venv_site_packages"] = hostvars["securedrop_venv_site_packages"].format(
         "3.8"
     )
-    hostvars["python_version"] = "3.8"
     hostvars["apparmor_enforce_actual"] = hostvars["apparmor_enforce"]["focal"]
 
     # If the tests are run against a production environment, check local config

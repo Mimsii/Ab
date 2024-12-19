@@ -14,7 +14,7 @@
 <p>{{ gettext('Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:').format("https://www.torproject.org/download/") }}
 <pre>{{ source_url }}</pre>
 </p>
-<p> {{ gettext ('If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop.') }} {{ gettext('Click the <img src={icon} alt="" width="16" height="16">&nbsp;<b>New Identity</b> button in your Tor Browser\'s toolbar. This will clear your Tor Browser activity data on this device.').format(icon=url_for('static', filename='i/torbroom.png'))  }}
+<p> {{ gettext ('If you are already using Tor Browser, copy the address above and click Tor Browser\'s <strong>New Identity</strong> button before you access SecureDrop.') }} {{ gettext('Click the <img src={icon} alt="" width="16" height="16">&nbsp;<b>New Identity</b> button in your Tor Browser\'s toolbar. This will clear your Tor Browser activity data on this device.').format(icon=url_for('static', filename='i/torbroom.png'))  }}
 </p>
 <p>{{ gettext('If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network.') }}
 </p>

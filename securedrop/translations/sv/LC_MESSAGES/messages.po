@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2024-09-20 10:33+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.7.1\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2024-12-11 21:33+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.8.4\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Namnet är för långt"
@@ -15,7 +15,7 @@ msgstr[0] "Måste vara minst {num} tecken långt."
 msgstr[1] "Måste vara minst {num} tecken långt."
 
 msgid "This username is invalid because it is reserved for internal use by the software."
-msgstr "Detta användarnamn är ogiltigt, pga. att det är reserverat av programvaran för internt bruk."
+msgstr "Detta användarnamn är ogiltigt eftersom det är reserverat av programvaran."
 
 msgid "Invalid username"
 msgstr "Inkorrekt användarnamn"
@@ -200,7 +200,7 @@ msgid "The password you submitted is invalid. Password not changed."
 msgstr "Lösenordet du angav är ogiltigt! Lösenordet har inte ändrats."
 
 msgid "There was an error, and the new password might not have been saved correctly. To prevent you from getting locked out of your account, you should reset your password again."
-msgstr "Det uppstod ett fel, och det är möjligt att det nya lösenordet inte sparades korrekt. För att undvika att du blir utlåst från ditt konto, bör du återställa ditt lösenord en gång till."
+msgstr "Det uppstod ett fel, det är möjligt att det nya lösenordet inte sparades korrekt. För att undvika att du blir utelåst från ditt konto, bör du återställa ditt lösenord en gång till."
 
 msgid "Password updated. Don't forget to save it in your KeePassX database. New password:"
 msgstr "Lösenord uppdaterat. Glöm inte att spara det i din KeePassX databas. Det nya lösenordet är:"
@@ -409,6 +409,12 @@ msgstr "Du är nästan klar! För att avsluta användarkonfigureringen, följ in
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Kan du inte skanna koden? Du kan manuellt koppla FreeOTP till detta konto genom att skriva in denna tvåfaktorhemligheten i FreeOTP:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Kritiskt:</strong>&nbsp;&nbsp;Operativsystemet som används av dina SecureDrop-servrar har nått slutet av sin livslängd . En manuell uppdatering krävs för att återaktivera källgränsnittet och för att fortsätta vara säker. Vänligen kontakta din administratör <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Läs mer</a>"
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Viktigt:</strong>&nbsp;&nbsp;Dina SecureDrop-servrar behöver manuell uppmärksamhet för att lösa problem som förhindrar automatisk uppdatering till nästa operativsystems version. Vänligen kontakta din administratör.<a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Läs mer</a>"
+
 msgid "Navigation"
 msgstr "Navigering"
 
@@ -440,7 +446,7 @@ msgid "All messages, files, and replies from sources are stored as encrypted fil
 msgstr "Alla meddelanden, filer och svar sparas som krypterade filer av säkerhetsskäl. För att läsa dessa, behöver du avkryptera dem på din “Secure Viewing Station”."
 
 msgid "Download Selected Files"
-msgstr "Ladda ner valda filer"
+msgstr "Ladda ned valda filer"
 
 msgid "Download Selected"
 msgstr "Ladda ned markerade"
@@ -516,17 +522,7 @@ msgid ""
 "<p>\n"
 "All files, messages, and replies will also be deleted when their account is deleted.\n"
 "</p>"
-msgstr ""
-"<p>\n"
-"Radering av kontot för <b>{source}</b> kommer att:\n"
-"</p>\n"
-"<ul>\n"
-"<li>hindra dem från att logga in med sitt kodnamn igen\n"
-"<li>hindra din organisation från att skicka svar\n"
-"</ul>\n"
-"<p>\n"
-"Alla filer, meddelanden och svar kommer också att raderas när kontot raderas..\n"
-"</p>"
+msgstr "<p>\nRadering av kontot för <b>{source}</b> kommer att:\n</p>\n<ul>\n<li>hindra dem från att logga in med sitt kodnamn igen\n<li>hindra din organisation från att skicka svar\n</ul>\n<p>\nAlla filer, meddelanden och svar kommer också att raderas när kontot raderas..\n</p>"
 
 msgid "Yes, Delete Source Account"
 msgstr "Ja, radera källan"
@@ -711,8 +707,8 @@ msgstr "Meddelanden"
 msgid "Date"
 msgstr "Datum"
 
-msgid "There are no submissions!"
-msgstr "Det finns inga inskick!"
+msgid "There are no submissions."
+msgstr "Det finns inga inlämningar."
 
 msgid "Filter by codename"
 msgstr "Filtrera på kodnamn"
@@ -825,7 +821,7 @@ msgid "Important"
 msgstr "Viktigt"
 
 msgid "You have been logged out due to inactivity or a problem with your session. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr "Du har loggats utpågrund av inaktivitet eller problem med din session. Klicka på <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> knappen i din TorBrowser för att gå vidare. Detta kommer att rensa din Tor Browsers aktivitet på den här enheten."
+msgstr "Du har loggats ut pågrund av inaktivitet eller problem med din session. Klicka på <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> knappen i din TorBrowser för att gå vidare. Detta kommer att rensa din Tor Browsers aktivitet på den här enheten."
 
 msgid "Protecting Journalists and Sources"
 msgstr "Skyddar journalister och källor"
@@ -834,10 +830,10 @@ msgid "Skip to notification"
 msgstr "Hoppa till notifiering"
 
 msgid "Return to Submission Page"
-msgstr "Återgå till inlämningssida"
+msgstr "Återgå till inlämningssidan"
 
 msgid "Return to Home Page"
-msgstr "Återgår till startsida"
+msgstr "Återgå till startsidan"
 
 msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Vi ber om ursäkt, men vår SecureDrop är för närvarande offline."
@@ -900,7 +896,7 @@ msgid "Click <b>Change</b> to open Security Level preferences"
 msgstr "Klicka <b>Byt</b> för att öppna säkerhetsnivå-inställningar"
 
 msgid "Select <b>Safest</b> and close the preferences tab"
-msgstr "Välj <b>säkrast</b> och stäng sedan inställningarna"
+msgstr "Välj <b>Säkrast</b> och stäng sedan inställningarna"
 
 msgid "<a href=\"/\" aria-label=\"Follow these instructions, then refresh this page\">Refresh this page</a>, and you're done!"
 msgstr "<a href=\"/\" aria-label=\"Följ dessa instruktioner och uppdatera sedan sidan\">Uppdatera sidan</a> och sedan är du klar!"
@@ -909,7 +905,7 @@ msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</stron
 msgstr "<strong>Det är rekommenderat att använda Tor Browser för att använda SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\"> Lär dig hur den installeras</a>, eller ignorera denna varning och fortsätt."
 
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a class=\"recommend-tor\" aria-label=\"Learn how to install Tor Browser\" href=\"{tor_browser_url}\" >Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Det är rekommenderat att använda datorversionen av Tor Browser för åtkomst till SecureDrop, eftersom Orfox inte ger samma nivå av säkerhet och anonymitet som datorversionen. <a class=\"recommend-tor\" aria-label=\"Learn how to install Tor Browser\" href=\"{tor_browser_url}\" >Lär dig hur du installerar </a>, eller ignorera denna varningen för att fortsätta."
+msgstr "<strong>Det är rekommenderat att använda datorversionen av Tor Browser för åtkomst till SecureDrop, eftersom Orfox inte ger samma nivå av säkerhet och anonymitet som datorversionen.</strong> <a class=\"recommend-tor\" aria-label=\"Learn how to install Tor Browser\" href=\"{tor_browser_url}\" >Lär dig hur du installerar </a>, eller ignorera denna varningen för att fortsätta."
 
 msgid "{} logo"
 msgstr "{} logga"
@@ -936,7 +932,7 @@ msgid "Log In Using Your Codename"
 msgstr "Logga in med ditt kodnamn"
 
 msgid "Log in"
-msgstr "Logga in"
+msgstr "Inloggning"
 
 msgid "Enter Codename"
 msgstr "Ange kodnamn"
@@ -951,7 +947,7 @@ msgid "CANCEL"
 msgstr "AVBRYT"
 
 msgid "Additional Action Required"
-msgstr "Mer information krävs"
+msgstr "Ytterligare åtgärd krävs"
 
 msgid "Log Back In"
 msgstr "Logga in igen"
@@ -993,7 +989,7 @@ msgid "Cancel and Clear Uploaded Content"
 msgstr "Avbryt och rensa uppladdat innehåll"
 
 msgid "Submit Uploaded Content"
-msgstr "Skicka in uppladdat innehål"
+msgstr "Skicka in uppladdat innehåll"
 
 msgid "Read Replies"
 msgstr "Läs svar"
@@ -1041,13 +1037,13 @@ msgid "You appear to be using a Tor proxy service to access SecureDrop. Proxy se
 msgstr "Du ser ut att använda en Tor proxytjänst för att ansluta till SecureDrop. Proxytjänster skyddar inte din anonymitet."
 
 msgid "Anyone monitoring your Internet traffic &mdash; including your government, your Internet provider, or the proxy operator &mdash; may be able to identify you."
-msgstr "Om någon övervakar din internettrafik &mdash; inklusive dina myndigheter, din internetleverantör eller proxy-administratören &mdash; kan det ha möjlighet att identifiera dig."
+msgstr "Om någon övervakar din internettrafik &mdash; inklusive dina myndigheter, din internetleverantör eller proxy-administratören &mdash; kan de ha möjlighet att identifiera dig."
 
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Använd alltid Tor Browser (<code>{}</code>) för att ansluta till SecureDrop. Riktiga SecureDrop-sidadresser slutar med <code>.onion</code>. Den korrekta adressen för den här sidan är:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Om du redan använda Tor Browser, kopiera adressen ovan och generera en ny identitet innan du ansluter till SecureDrop."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr "Omn du redan använder Tor Browser, kopiera adressen ovan och klicka på <strong>New Identity</strong>-knappen innan du ansluter till SecureDrop."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Om det finns en risk att din internettrafik är övervakad, fundera på att ansluta från en annan plats eller ett annat nätverk."
@@ -1074,7 +1070,7 @@ msgid "Codename"
 msgstr "Kodnamn"
 
 msgid "Reveal Codename"
-msgstr "Visa kodnamn"
+msgstr "Plocka fram kodnamn"
 
 msgid "Show Codename"
 msgstr "Visa kodnamn"
@@ -1118,6 +1114,15 @@ msgstr "<strong> Viktigt:</strong> Ifall du önskar att förbli anonym, <strong>
 
 msgid "Back to submission page"
 msgstr "Tillbaka till inlämningssidan"
+
+#~ msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating system. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+#~ msgstr "<strong>Kritiskt:</strong>&nbsp;&nbsp;Dina SecureDrop-servrar behöver manuell uppmärksamhet för att lösa problem som förhindrar automatisk uppdatering till nästa operativsystems version. Vänligen kontakta din administratör.<a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\"><a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Läs mer</a>"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Det finns inga inskick!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Om du redan använda Tor Browser, kopiera adressen ovan och generera en ny identitet innan du ansluter till SecureDrop."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "Du loggades ut på grund av inaktivitet. Klicka på knappen <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Ny identitet</b> i ditt Tor Browser-verktygsfält innan du går vidare. Detta rensar dina Tor Browser-aktivitetsdata på den här enheten."

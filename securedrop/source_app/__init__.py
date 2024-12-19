@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Optional, Tuple
 
 import i18n
+import server_os
 import template_filters
 import version
 import werkzeug
@@ -65,6 +66,8 @@ def create_app(config: SecureDropConfig) -> Flask:
 
     # Check if the Submission Key is valid; if not, we'll disable the UI
     app.config["SUBMISSION_KEY_VALID"] = validate_journalist_key()
+    # Check if the server OS is past EOL; if so, we'll disable the UI
+    app.config["OS_PAST_EOL"] = server_os.is_os_past_eol()
 
     @app.errorhandler(CSRFError)
     def handle_csrf_error(e: CSRFError) -> werkzeug.Response:
@@ -113,8 +116,8 @@ def create_app(config: SecureDropConfig) -> Flask:
 
     @app.before_request
     @ignore_static
-    def check_submission_key() -> Optional[werkzeug.Response]:
-        if not app.config["SUBMISSION_KEY_VALID"]:
+    def check_offline() -> Optional[werkzeug.Response]:
+        if not app.config["SUBMISSION_KEY_VALID"] or app.config["OS_PAST_EOL"]:
             session.clear()
             g.show_offline_message = True
             return make_response(render_template("offline.html"), 503)

@@ -7,7 +7,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2024-10-07 18:33+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.7.1\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2024-12-11 15:33+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.8.4\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Nome troppo lungo"
@@ -412,6 +412,12 @@ msgstr "Hai quasi finito! Per completare l'aggiunta di questo nuovo utente, chie
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Impossibile eseguire la scansione del codice a barre? È possibile accoppiare manualmente FreeOTP con questo account inserendo il seguente codice a due fattori nell'applicazione:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
 msgid "Navigation"
 msgstr "Navigazione"
 
@@ -428,7 +434,7 @@ msgid "Log Out"
 msgstr "Esci"
 
 msgid "Return to All Sources"
-msgstr ""
+msgstr "Ritorna a tutte le fonti"
 
 msgid "Powered by <b>SecureDrop {version}</b>."
 msgstr "Offerto da <b>SecureDrop {version}</b>."
@@ -714,8 +720,8 @@ msgstr "Messaggi"
 msgid "Date"
 msgstr "Data"
 
-msgid "There are no submissions!"
-msgstr "Non ci sono invii!"
+msgid "There are no submissions."
+msgstr ""
 
 msgid "Filter by codename"
 msgstr "Filtra per nome in codice"
@@ -758,8 +764,8 @@ msgstr "ACCEDI"
 
 msgid "Field must be 1 character long."
 msgid_plural "Field must be between 1 and {max_codename_len} characters long."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Il campo deve avere la lunghezza di 1 carattere."
+msgstr[1] "Il campo deve avere una lunghezza compresa tra 1 e {max_codename_len} caratteri."
 
 msgid "Invalid input."
 msgstr "Input non valido."
@@ -1049,8 +1055,8 @@ msgstr "Chiunque stia monitorando il traffico Internet come il tuo governo, il t
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Usa sempre il browser Tor (<code>{}</code>) per accedere a SecureDrop. Gli indirizzi validi per SecueDrop terminano con <code>.onion</code>. L'indirizzo esatto di questo sito è:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Se stai già usando Tor Browser, copia l'indirizzo mostrato sopra e genera una nuova identità prima di accedere a SecureDrop."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr ""
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Se esiste un ragionevole rischio che il tuo traffico Internet sia monitorato, considera la possibilità di connetterti da un posto o una rete diversi."
@@ -1077,7 +1083,7 @@ msgid "Codename"
 msgstr "Nome in codice"
 
 msgid "Reveal Codename"
-msgstr ""
+msgstr "Rivela il nome in codice"
 
 msgid "Show Codename"
 msgstr "Mostra il nome in codice"
@@ -1121,6 +1127,12 @@ msgstr "<strong>Importante:</strong> per rimanere anonimi <strong>non usare</str
 
 msgid "Back to submission page"
 msgstr "Torna alla pagina di invio documenti e messaggi"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Non ci sono invii!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Se stai già usando Tor Browser, copia l'indirizzo mostrato sopra e genera una nuova identità prima di accedere a SecureDrop."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "Disconnesso per inattività. Fare clic sul pulsante <img src={icon} alt=\"\" width=\"16\" height=\"16\"> <b>Nuova identità</b> nella barra degli strumenti del Browser Tor prima di proseguire. Questo cancellerà i dati dell'attività del Browser Tor su questo dispositivo."

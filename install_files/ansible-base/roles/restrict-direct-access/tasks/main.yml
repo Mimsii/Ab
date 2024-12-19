@@ -1,6 +1,4 @@
 ---
-- include_vars: "{{ ansible_distribution }}_{{ ansible_distribution_release }}.yml"
-
 - include_tasks: fetch_tor_config.yml
   when: fetch_tor_client_auth_configs
 

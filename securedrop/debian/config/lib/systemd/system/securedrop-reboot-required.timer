@@ -1,0 +1,8 @@
+[Unit]
+Description=Touch reboot-required file every 12 hours
+
+[Timer]
+OnCalendar=*-*-* 0/12:00:00
+
+[Install]
+WantedBy=timers.target

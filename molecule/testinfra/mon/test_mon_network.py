@@ -19,7 +19,7 @@ def test_mon_iptables_rules(host):
         default_interface=host.check_output("ip r | head -n 1 | awk '{ print $5 }'"),
         tor_user_id=host.check_output("id -u debian-tor"),
         time_service_user=host.check_output("id -u systemd-timesync"),
-        ssh_group_gid=host.check_output("getent group ssh | cut -d: -f3"),
+        ssh_group_gid=host.check_output("getent group sdssh | cut -d: -f3"),
         postfix_user_id=host.check_output("id -u postfix"),
         dns_server=securedrop_test_vars.dns_server,
     )

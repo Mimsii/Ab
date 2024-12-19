@@ -1,3 +1,7 @@
+import json
+import time
+
+import pytest
 import testutils
 
 test_vars = testutils.securedrop_test_vars
@@ -27,3 +31,36 @@ def test_release_manager_upgrade_channel(host):
     _, channel = raw_output.split("=")
 
     assert channel == "never"
+
+
+def test_migration_check(host):
+    """Verify our migration check script works"""
+    if host.system_info.codename != "focal":
+        pytest.skip("only applicable/testable on focal")
+
+    with host.sudo():
+        # remove state file so we can see if it works
+        if host.file("/etc/securedrop-noble-migration.json").exists:
+            host.run("rm /etc/securedrop-noble-migration.json")
+        cmd = host.run("systemctl start securedrop-noble-migration-check")
+        assert cmd.rc == 0
+        while host.service("securedrop-noble-migration-check").is_running:
+            time.sleep(1)
+
+        # JSON state file was created
+        assert host.file("/etc/securedrop-noble-migration.json").exists
+
+        cmd = host.run("cat /etc/securedrop-noble-migration.json")
+        assert cmd.rc == 0
+
+        contents = json.loads(cmd.stdout)
+        print(contents)
+        # The script did not error out
+        if "error" in contents:
+            # Run the script manually to get the error message
+            cmd = host.run("securedrop-noble-migration-check")
+            print(cmd.stdout)
+            # We'll fail in the next line after this
+        assert "error" not in contents
+        # All the values should be True
+        assert all(contents.values())

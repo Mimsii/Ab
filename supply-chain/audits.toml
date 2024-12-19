@@ -207,11 +207,22 @@ who = "Kunal Mehta <legoktm@debian.org>"
 criteria = "safe-to-run"
 version = "1.15.0"
 
+[[audits.url]]
+who = "Kunal Mehta <legoktm@debian.org>"
+criteria = "safe-to-run"
+delta = "2.5.3 -> 2.5.4"
+notes = "primarily reverting one of the changes made in 2.5.3"
+
 [[audits.xxhash-rust]]
 who = "Kunal Mehta <legoktm@debian.org>"
 criteria = "safe-to-run"
 version = "0.8.7"
 notes = "Only the `xxh3` feature, used by Sequoia, was reviewed"
+
+[[audits.zerofrom-derive]]
+who = "Kunal Mehta <legoktm@debian.org>"
+criteria = "safe-to-run"
+delta = "0.1.3 -> 0.1.4"
 
 [[trusted.aho-corasick]]
 criteria = "safe-to-deploy"
@@ -225,6 +236,13 @@ criteria = "safe-to-deploy"
 user-id = 3618 # David Tolnay (dtolnay)
 start = "2019-10-05"
 end = "2024-04-10"
+notes = "Rust Project member"
+
+[[trusted.anyhow]]
+criteria = "safe-to-deploy"
+user-id = 3618 # David Tolnay (dtolnay)
+start = "2019-10-05"
+end = "2025-05-14"
 notes = "Rust Project member"
 
 [[trusted.buffered-reader]]
@@ -253,6 +271,13 @@ criteria = "safe-to-deploy"
 user-id = 1 # Alex Crichton (alexcrichton)
 start = "2019-03-01"
 end = "2024-04-10"
+notes = "Rust Project member"
+
+[[trusted.displaydoc]]
+criteria = "safe-to-deploy"
+user-id = 1139 # Manish Goregaokar (Manishearth)
+start = "2024-06-20"
+end = "2025-05-14"
 notes = "Rust Project member"
 
 [[trusted.dyn-clone]]
@@ -303,6 +328,20 @@ start = "2019-04-02"
 end = "2024-04-10"
 notes = "Rust Project member"
 
+[[trusted.icu_properties]]
+criteria = "safe-to-deploy"
+user-id = 1139 # Manish Goregaokar (Manishearth)
+start = "2022-01-31"
+end = "2025-05-14"
+notes = "Rust Project member"
+
+[[trusted.idna]]
+criteria = "safe-to-deploy"
+user-id = 1139 # Manish Goregaokar (Manishearth)
+start = "2024-07-01"
+end = "2025-05-14"
+notes = "Rust Project member"
+
 [[trusted.indexmap]]
 criteria = "safe-to-deploy"
 user-id = 539 # Josh Stone (cuviper)
@@ -345,11 +384,25 @@ start = "2021-01-27"
 end = "2024-04-10"
 notes = "Rust Project member"
 
+[[trusted.libc]]
+criteria = "safe-to-deploy"
+user-id = 55123 # rust-lang-owner
+start = "2024-08-15"
+end = "2025-05-14"
+notes = "Rust Project role account"
+
 [[trusted.linux-raw-sys]]
 criteria = "safe-to-deploy"
 user-id = 6825 # Dan Gohman (sunfishcode)
 start = "2021-06-12"
 end = "2024-04-10"
+notes = "Rust Project member"
+
+[[trusted.linux-raw-sys]]
+criteria = "safe-to-deploy"
+user-id = 6825 # Dan Gohman (sunfishcode)
+start = "2021-06-12"
+end = "2025-05-14"
 notes = "Rust Project member"
 
 [[trusted.lock_api]]
@@ -471,11 +524,25 @@ start = "2021-10-29"
 end = "2024-04-10"
 notes = "Rust Project member"
 
+[[trusted.rustix]]
+criteria = "safe-to-deploy"
+user-id = 6825 # Dan Gohman (sunfishcode)
+start = "2021-10-29"
+end = "2025-05-14"
+notes = "Rust Project member"
+
 [[trusted.rustversion]]
 criteria = "safe-to-deploy"
 user-id = 3618 # David Tolnay (dtolnay)
 start = "2019-07-08"
 end = "2024-04-10"
+notes = "Rust Project member"
+
+[[trusted.ryu]]
+criteria = "safe-to-deploy"
+user-id = 3618 # David Tolnay (dtolnay)
+start = "2019-05-02"
+end = "2025-05-14"
 notes = "Rust Project member"
 
 [[trusted.scopeguard]]
@@ -487,22 +554,15 @@ notes = "Rust Project member"
 
 [[trusted.sequoia-openpgp]]
 criteria = "safe-to-deploy"
-user-id = 33886 # Neal H. Walfield (nwalfield)
-start = "2022-11-18"
-end = "2024-04-10"
-notes = "Sequoia developer"
-
-[[trusted.sequoia-openpgp]]
-criteria = "safe-to-deploy"
 user-id = 33711 # Justus Winter (teythoon)
 start = "2019-03-14"
 end = "2024-12-12"
 notes = "Sequoia developer"
 
-[[trusted.sha1collisiondetection]]
+[[trusted.sequoia-openpgp]]
 criteria = "safe-to-deploy"
 user-id = 33886 # Neal H. Walfield (nwalfield)
-start = "2022-08-28"
+start = "2022-11-18"
 end = "2024-04-10"
 notes = "Sequoia developer"
 
@@ -520,11 +580,25 @@ start = "2020-11-11"
 end = "2024-04-27"
 notes = "Sequoia developer"
 
+[[trusted.sha1collisiondetection]]
+criteria = "safe-to-deploy"
+user-id = 33886 # Neal H. Walfield (nwalfield)
+start = "2022-08-28"
+end = "2024-04-10"
+notes = "Sequoia developer"
+
 [[trusted.syn]]
 criteria = "safe-to-deploy"
 user-id = 3618 # David Tolnay (dtolnay)
 start = "2019-03-01"
 end = "2024-04-10"
+notes = "Rust Project member"
+
+[[trusted.syn]]
+criteria = "safe-to-deploy"
+user-id = 3618 # David Tolnay (dtolnay)
+start = "2019-03-01"
+end = "2025-05-14"
 notes = "Rust Project member"
 
 [[trusted.target-lexicon]]
@@ -560,4 +634,32 @@ criteria = "safe-to-deploy"
 user-id = 3618 # David Tolnay (dtolnay)
 start = "2019-08-17"
 end = "2024-04-10"
+notes = "Rust Project member"
+
+[[trusted.url]]
+criteria = "safe-to-deploy"
+user-id = 1139 # Manish Goregaokar (Manishearth)
+start = "2021-02-18"
+end = "2025-05-14"
+notes = "Rust Project member"
+
+[[trusted.walkdir]]
+criteria = "safe-to-deploy"
+user-id = 189 # Andrew Gallant (BurntSushi)
+start = "2019-06-09"
+end = "2025-05-22"
+notes = "Rust Project member"
+
+[[trusted.zerofrom-derive]]
+criteria = "safe-to-deploy"
+user-id = 1139 # Manish Goregaokar (Manishearth)
+start = "2022-04-06"
+end = "2025-05-14"
+notes = "Rust Project member"
+
+[[trusted.zerovec-derive]]
+criteria = "safe-to-deploy"
+user-id = 1139 # Manish Goregaokar (Manishearth)
+start = "2021-12-11"
+end = "2025-05-14"
 notes = "Rust Project member"

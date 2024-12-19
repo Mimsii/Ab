@@ -1,0 +1,10 @@
+[Unit]
+Description=Cleanup OSSEC diff queue
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=5m
+
+[Install]
+WantedBy=timers.target

@@ -4,7 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2024-09-24 08:33+0000\nLast-Translator: Ricky Tigg <ricky.tigg@gmail.com>\nLanguage-Team: Finnish <https://weblate.securedrop.org/projects/securedrop/securedrop/fi/>\nLanguage: fi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.7.1\nGenerated-By: Babel 2.4.0\n"
+msgstr ""
+"Project-Id-Version: SecureDrop 0.5-rc4\n"
+"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
+"PO-Revision-Date: 2024-09-24 08:33+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://weblate.securedrop.org/projects/securedrop/securedrop/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.7.1\n"
+"Generated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Nimi on liian pitkä"
@@ -409,6 +421,12 @@ msgstr "Olet melkein valmis! Viimeistelläksesi uuden käyttäjän lisäämisen,
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Etkö voi skannata QR-koodia? Voit parittaa FreeOTP:n käsin tämän tilin kanssa syöttämällä seuraavan kaksivaiheisen tunnistautumisen salaisuuden sovellukseen:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
 msgid "Navigation"
 msgstr "Liikkuminen"
 
@@ -711,8 +729,8 @@ msgstr "Viestit"
 msgid "Date"
 msgstr "Päiväys"
 
-msgid "There are no submissions!"
-msgstr "Ei lähetyksiä!"
+msgid "There are no submissions."
+msgstr ""
 
 msgid "Filter by codename"
 msgstr "Suodata koodinimellä"
@@ -1046,8 +1064,8 @@ msgstr "Kuka tahansa, joka valvoo Internet-liikennettäsi, mukaan lukien valtio,
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Käytä aina Tor-selainta (<code>{}</code>) päästäksesi SecureDropiin. Kelvollisten SecureDrop-sivustojen osoitteet päättyvät <code>.onion</code>. Tämän sivuston oikea osoite on:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Jos käytät jo Tor-selainta, kopioi yllä oleva osoite ja luo uusi identiteetti, ennen kuin käytät SecureDropia."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr ""
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Jos koet mahdolliseksi, että Internet-liikennettäsi tarkkaillaan, pyri muodostamaan yhteys eri sijainnista ja/tai verkosta."
@@ -1118,6 +1136,12 @@ msgstr "<strong>Tärkeää:</strong> Jos haluat pysyä nimettömänä, <strong>�
 
 msgid "Back to submission page"
 msgstr "Takaisin lähetyssivulle"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Ei lähetyksiä!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Jos käytät jo Tor-selainta, kopioi yllä oleva osoite ja luo uusi identiteetti, ennen kuin käytät SecureDropia."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "Sinut kirjattiin ulos toimettomuuden vuoksi. Napsauta <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Uusi identiteetti</b> -painiketta Tor-selaimen työkalupalkista, ennen kuin jatkat. Tämä tyhjentää Tor-selaimen käyttötiedot tältä laitteelta."

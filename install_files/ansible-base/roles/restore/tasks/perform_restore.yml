@@ -121,7 +121,24 @@
     exclude: "var/lib/tor,etc/tor/torrc"
   when: restore_skip_tor
 
-- name: Reconfigure securedrop-app-code
+- name: Remove Redis password line from restored config.py, if it exists
+  lineinfile:
+    state: absent
+    path: /var/www/securedrop/config.py
+    regexp: "^REDIS_PASSWORD = .*$"
+
+- name: Remove /var/www/securedrop/rq_config.py if it exists
+  file:
+    state: absent
+    path: /var/www/securedrop/rq_config.py
+
+- name: Remove Redis password line from /etc/redis/redis.conf, if it exists
+  lineinfile:
+    path: /etc/redis/redis.conf
+    state: absent
+    regexp: "^requirepass .*$"
+
+- name: Reconfigure securedrop-app-code, regenerating Redis config vi postint
   command: dpkg-reconfigure securedrop-app-code
 
 - name: Reconfigure securedrop-config

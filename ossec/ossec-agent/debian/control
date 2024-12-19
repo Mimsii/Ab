@@ -8,5 +8,5 @@ Standards-Version: 4.5.1
 Package: ossec-agent
 Architecture: amd64
 Conflicts: ossec-server
-Depends: libc6, libssl1.1, expect, inotify-tools, adduser
+Depends: ${shlibs:Depends}, expect, inotify-tools, adduser
 Description: Installs the generic ossec agent

@@ -3,7 +3,6 @@ import testutils
 
 securedrop_test_vars = testutils.securedrop_test_vars
 testinfra_hosts = [securedrop_test_vars.app_hostname]
-python_version = securedrop_test_vars.python_version
 
 
 def test_apache_default_docroot_is_absent(host):
@@ -13,32 +12,6 @@ def test_apache_default_docroot_is_absent(host):
     leak, as it displays version information by default.
     """
     assert not host.file("/var/www/html").exists
-
-
-@pytest.mark.parametrize(
-    "package",
-    [
-        "apache2",
-        "apparmor-utils",
-        "coreutils",
-        "gnupg2",
-        "libapache2-mod-xsendfile",
-        f"libpython{python_version}",
-        "paxctld",
-        "python3",
-        "redis-server",
-        "securedrop-config",
-        "securedrop-keyring",
-        "sqlite3",
-    ],
-)
-def test_securedrop_application_apt_dependencies(host, package):
-    """
-    Ensure apt dependencies required to install `securedrop-app-code`
-    are present. These should be pulled in automatically via apt,
-    due to specification in Depends in package control file.
-    """
-    assert host.package(package).is_installed
 
 
 @pytest.mark.parametrize(

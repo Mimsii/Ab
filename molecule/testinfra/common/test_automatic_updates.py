@@ -1,4 +1,5 @@
 import re
+import time
 
 import pytest
 import testutils
@@ -49,6 +50,8 @@ def test_sources_list(host, repo):
     Ensure the correct apt repositories are specified
     in the sources.list for apt.
     """
+    if host.system_info.codename != "focal":
+        pytest.skip("sources.list is only provisioned on focal")
     repo_config = repo.format(securedrop_target_platform=host.system_info.codename)
     f = host.file("/etc/apt/sources.list")
     assert f.is_file
@@ -56,6 +59,32 @@ def test_sources_list(host, repo):
     assert f.mode == 0o644
     repo_regex = f"^{re.escape(repo_config)}$"
     assert f.contains(repo_regex)
+
+
+def test_ubuntu_sources(host):
+    """
+    Ensure the correct apt repositories are specified
+    in the ubuntu.sources for apt.
+    """
+    distro = host.system_info.codename
+    if distro == "focal":
+        pytest.skip("sources.list is only provisioned on noble")
+    f = host.file("/etc/apt/sources.list.d/ubuntu.sources")
+    assert f.is_file
+    assert f.user == "root"
+    assert f.mode == 0o644
+    expected = f"""\
+URIs: http://archive.ubuntu.com/ubuntu/
+Suites: {distro} {distro}-updates
+Components: main universe restricted multiverse
+"""
+    assert f.contains(expected)
+    expected_security = f"""\
+URIs: http://security.ubuntu.com/ubuntu/
+Suites: {distro}-security
+Components: main universe restricted multiverse
+"""
+    assert f.contains(expected_security)
 
 
 apt_config_options = {
@@ -119,9 +148,11 @@ def test_unattended_upgrades_functional(host):
     """
     c = host.run("sudo unattended-upgrades --dry-run --debug")
     assert c.rc == 0
+    distro = host.system_info.codename
     expected_origins = (
-        "Allowed origins are: origin=Ubuntu,archive=focal, origin=Ubuntu,archive=focal-security"
-        ", origin=Ubuntu,archive=focal-updates, origin=SecureDrop,codename=focal"
+        f"Allowed origins are:"
+        f" origin=Ubuntu,archive={distro}, origin=Ubuntu,archive={distro}-security"
+        f", origin=Ubuntu,archive={distro}-updates, origin=SecureDrop,codename={distro}"
     )
     expected_result = (
         "No packages found that can be upgraded unattended and no pending auto-removals"
@@ -173,20 +204,26 @@ def test_apt_daily_upgrade_timer_schedule(host):
     assert "RandomizedDelayUSec=20m" in c.stdout
 
 
-def test_reboot_required_cron(host):
+def test_reboot_required_timer(host):
     """
     Unattended-upgrades does not reboot the system if the updates don't require it.
     However, we use daily reboots for SecureDrop to ensure memory is cleared periodically.
     Here, we ensure that reboot-required flag is dropped twice daily to ensure the system
     is rebooted every day at the scheduled time.
     """
-    f = host.file("/etc/cron.d/reboot-flag")
-    assert f.is_file
-    assert f.user == "root"
-    assert f.mode == 0o644
-
-    line = "^{}$".format(re.escape("0 */12 * * * root touch /var/run/reboot-required"))
-    assert f.contains(line)
+    f = host.service("securedrop-reboot-required.timer")
+    assert f.is_enabled
+    assert f.is_running
+    # Run the service itself to verify the file is created
+    with host.sudo():
+        if host.file("/var/run/reboot-required").exists:
+            cmd = host.run("rm /var/run/reboot-required")
+            assert cmd.rc == 0
+        cmd = host.run("systemctl start securedrop-reboot-required")
+        assert cmd.rc == 0
+        while host.service("securedrop-reboot-required").is_running:
+            time.sleep(1)
+        assert host.file("/var/run/reboot-required").exists
 
 
 def test_all_packages_updated(host):

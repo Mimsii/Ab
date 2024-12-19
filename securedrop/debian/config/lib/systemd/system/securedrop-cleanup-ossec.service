@@ -1,0 +1,7 @@
+[Unit]
+Description=Cleanup OSSEC diff queue
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/securedrop-cleanup-ossec.py
+User=root

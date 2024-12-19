@@ -1,6 +1,7 @@
 debian/app-code/etc /
 debian/app-code/lib /
 debian/app-code/var /
+debian/app-code/usr /
 COPYING alembic.ini babel.cfg config.py.example /var/www/securedrop
 *.py i18n.json /var/www/securedrop
 journalist_app journalist_templates /var/www/securedrop

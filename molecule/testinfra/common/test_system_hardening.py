@@ -1,4 +1,5 @@
 import re
+import time
 
 import pytest
 import testutils
@@ -30,6 +31,8 @@ def test_sysctl_options(host, sysctl_opt):
     """
     Ensure sysctl flags are set correctly. Most of these checks
     are hardening IPv4, which is appropriate due to the heavy use of Tor.
+
+    These are all set via securedrop-grsec (in kernel-builder).
     """
     with host.sudo():
         assert host.sysctl(sysctl_opt[0]) == sysctl_opt[1]
@@ -75,9 +78,8 @@ def test_swap_disabled(host):
     """
     hostname = host.check_output("hostname")
 
-    # Mon doesn't have swap disabled yet
     if hostname.startswith("mon"):
-        return True
+        pytest.skip("mon doesn't have swap disabled yet")
 
     c = host.check_output("swapon --summary")
     # A leading slash will indicate full path to a swapfile.
@@ -110,7 +112,7 @@ def test_twofactor_disabled_on_tty(host):
         ("PasswordAuthentication", "no"),
         ("PubkeyAuthentication", "yes"),
         ("RSAAuthentication", "yes"),
-        ("AllowGroups", "ssh"),
+        ("AllowGroups", "sdssh"),
         ("AllowTcpForwarding", "no"),
         ("AllowAgentForwarding", "no"),
         ("PermitTunnel", "no"),
@@ -173,6 +175,29 @@ def test_iptables_packages(host):
     firewall config across reboots.
     """
     assert host.package("iptables-persistent").is_installed
+    assert not host.package("ufw").is_installed
+
+
+def test_package_removal(host):
+    """Test the securedrop-remove-packages service"""
+    if host.system_info.codename != "focal":
+        # ufw is uninstallable in noble because of the conflict
+        # with iptables-persistent
+        pytest.skip("only applicable/testable on focal")
+
+    with host.sudo():
+        if not host.package("ufw").is_installed:
+            cmd = host.run("apt-get install ufw --yes")
+            assert cmd.rc == 0
+        assert host.file("/usr/sbin/ufw").exists
+        # Trigger the service manually
+        cmd = host.run("systemctl start securedrop-remove-packages")
+        assert cmd.rc == 0
+        # Wait for the unit to run
+        while host.service("securedrop-remove-packages").is_running:
+            time.sleep(1)
+
+    assert not host.package("ufw").is_installed
 
 
 def test_snapd_absent(host):

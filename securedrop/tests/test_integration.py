@@ -432,7 +432,7 @@ def test_delete_collection(mocker, source_app, journalist_app, test_journo):
         text = resp.data.decode("utf-8")
         assert escape(f"The account and data for the source {col_name} have been deleted.") in text
 
-        assert "There are no submissions!" in text
+        assert "There are no submissions." in text
 
         # Make sure the collection is deleted from the filesystem
         def assertion():

@@ -1,2 +1,4 @@
 debian/config/etc /
+debian/config/lib /
 debian/config/opt /
+debian/config/usr /

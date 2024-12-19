@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.12.0~rc1\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2024-09-09 14:32+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\n"
-"Language: is\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 5.6.2\n"
-"Generated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.12.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2024-12-16 16:50+0000\nLast-Translator: Oktavia <oktaviahrund@gmail.com>\nLanguage-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\nLanguage: is\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\nX-Generator: Weblate 5.8.4\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Nafnið er of langt"
@@ -36,7 +24,7 @@ msgid "{time} ago"
 msgstr "Fyrir {time} síðan"
 
 msgid "You have been logged out due to inactivity or a problem with your session."
-msgstr ""
+msgstr "Þú hefur verið skráð/ur út vegna aðgerðaleysis eða vandamála með setuna þína."
 
 msgid "SecureDrop"
 msgstr "SecureDrop"
@@ -421,6 +409,12 @@ msgstr "Þetta er næstum því búið! Til að klára að bæta við þessum n�
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Nærðu ekki að skanna strikamerkið? Þú getur parað FreeOTP handvirkt við þennan notandaaðgang með því að setja eftirfarandi tvíþátta-leyniorð inn í forritið:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Alvarlegt:</strong>&nbsp;&nbsp;Stýrikerfið sem SecureDrop-þjónar þínir keyra á hefur náð endalokum líftíma síns. Handvirk uppfærsla er nauðsynleg til að endurvirkja grunnviðmótið og tryggja öryggi kerfisins. Hafðu samband við kerfisstjórann þinn. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Kanna nánar</a>"
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Mikilvægt:</strong>&nbsp;&nbsp;SecureDrop-þjónninn þinn krefst handvirkrar íhlutunar til að leysa vandamál sem koma í veg fyrir sjálfvirka uppfærslu í næstu útgáfu stýrikerfisins. Hafðu samband við kerfisstjórann þinn. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Kanna nánar</a>"
+
 msgid "Navigation"
 msgstr "Flakk"
 
@@ -723,8 +717,8 @@ msgstr "Skilaboð"
 msgid "Date"
 msgstr "Dagsetning"
 
-msgid "There are no submissions!"
-msgstr "Það eru engar innsendingar!"
+msgid "There are no submissions."
+msgstr "Það eru engar innsendingar."
 
 msgid "Filter by codename"
 msgstr "Sía eftir kóðanafni"
@@ -837,7 +831,7 @@ msgid "Important"
 msgstr "Mikilvægt"
 
 msgid "You have been logged out due to inactivity or a problem with your session. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr ""
+msgstr "Þú hefur verið skráð/ur út vegna aðgerðaleysis eða vandamála með setuna þína. Smelltu á hnappinn <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nýtt auðkenni</b> í verkfærastiku Tor-vafrans áður en lengra er haldið. Það mun hreinsa út öll gögn um virkni Tor-vafrans á þessu tæki."
 
 msgid "Protecting Journalists and Sources"
 msgstr "Verndum frétta- og heimildarmenn"
@@ -849,7 +843,7 @@ msgid "Return to Submission Page"
 msgstr "Til baka á innsendingasíðuna"
 
 msgid "Return to Home Page"
-msgstr "Fara aftur á upphafssíðu"
+msgstr "Fara aftur á upphafssíðuna"
 
 msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Því miður, SecureDrop-netþjónninn okkar er ótengdur þessa stundina."
@@ -921,7 +915,7 @@ msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</stron
 msgstr "<strong>Mælt er með því að nota Tor-vafrann til að fá aðkomu að SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Sjáðu hvernig á að setja upp Tor-vafrann</a>, eða hunsaðu þessa aðvörun til að halda áfram."
 
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a class=\"recommend-tor\" aria-label=\"Learn how to install Tor Browser\" href=\"{tor_browser_url}\" >Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Mælt er með því að nota skjáborðsútgáfu Tor-vafrans til aðgangs að SecureDrop, þar sem Orfox gefur ekki sama stig öryggis og nafnleyndar eins og skjáborðsútgáfurnar.</strong> <a class=\"recommend-tor\" aria-label=\"Sjáðu hvernig á að setja upp Tor-vafrann\" href=\"{tor_browser_url}\" >Sjáðu hvernig á að setja upp Tor-vafrann</a>, eða hunsaðu þessa aðvörun til að halda áfram."
+msgstr "<strong>Mælt er með því að nota skjáborðsútgáfu Tor-vafrans til aðgangs að SecureDrop, þar sem Orfox veitir ekki sama stig öryggis og nafnleyndar eins og skjáborðsútgáfurnar.</strong> <a class=\"recommend-tor\" aria-label=\"Sjáðu hvernig á að setja upp Tor-vafrann\" href=\"{tor_browser_url}\" >Sjáðu hvernig á að setja upp Tor-vafrann</a>, eða hunsaðu þessa aðvörun til að halda áfram."
 
 msgid "{} logo"
 msgstr "{} táknmerki"
@@ -1058,8 +1052,8 @@ msgstr "Hver sá sem gæti fylgist með netumferðinni þinni &mdash; t.d. stjó
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Þú skalt alltaf nota Tor-vafrann (<code>{}</code>) til að tengjast SecureDrop. Gildar slóðir á SecureDrop-vefsvæði enda á <code>.onion</code>. Rétta slóðin á þennan vef er:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Ef þú ert þegar að nota Tor-vafrann, ættirðu að afrita vefslóðina hér fyrir ofan og útbúa nýtt auðkenni áður en þú tengist SecureDrop."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr "Ef þú ert þegar að nota Tor-vafrann, skaltu afrita slóðina hér fyrir ofan og smella á <strong>Nýtt auðkenni</strong> hnappinn áður en þú skráir þig inn á SecureDrop."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Ef möguleiki er á að einhverjir fylgist með internetnotkuninni þinni, ættirðu kannski að tengjast frá öðrum stað eða öðru netkerfi."
@@ -1086,7 +1080,7 @@ msgid "Codename"
 msgstr "Kóðanafn"
 
 msgid "Reveal Codename"
-msgstr "Birta kóðanafn"
+msgstr "Afhjúpa kóðanafn"
 
 msgid "Show Codename"
 msgstr "Birta kóðanafn"
@@ -1130,6 +1124,15 @@ msgstr "<strong>Mikilvægt:</strong> Ef þú óskar áframhaldandi nafnleyndar, 
 
 msgid "Back to submission page"
 msgstr "Til baka á innsendingasíðuna"
+
+#~ msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating system. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+#~ msgstr "<strong>Mikilvægt:</strong>&nbsp;&nbsp;SecureDrop-þjónninn þinn þarf handvirkt inngrip til að leysa vandamál sem koma í veg fyrir sjálfvirka uppfærslu í næstu útgáfu stýrikerfisins. Hafðu samband við kerfisstjórann þinn. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Kanna nánar</a>"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Það eru engar innsendingar!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Ef þú ert þegar að nota Tor-vafrann, ættirðu að afrita vefslóðina hér fyrir ofan og útbúa nýtt auðkenni áður en þú tengist SecureDrop."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "Þú varst skráð/ur út vegna ónógrar virkni. Smelltu á hnappinn <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nýtt auðkenni</b> í verkfærastiku Tor-vafrans áður en haldið er áfram. Það mun hreinsa út allar fyrri aðgerðir Tor-vafrans á þessu tæki."

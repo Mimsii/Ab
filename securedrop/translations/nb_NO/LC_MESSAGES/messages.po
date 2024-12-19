@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2024-09-25 14:33+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.7.1\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2024-12-17 10:33+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.8.4\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Navnet er for langt"
@@ -26,6 +26,7 @@ msgstr "{time} siden"
 msgid "You have been logged out due to inactivity or a problem with your session."
 msgstr "Du har blitt logget ut på grunn av inaktivitet eller et problem med din innloggingsøkt."
 
+#, fuzzy
 msgid "SecureDrop"
 msgstr "SecureDrop"
 
@@ -409,6 +410,12 @@ msgstr "Du er nesten ferdig! For å fullføre opprettelsen av denne nye brukeren
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Kan du ikke skanne strekkoden? Du kan koble FreeOTP til denne kontoen manuelt ved å skrive inn følgende tofaktorhemmelighet i FreeOTP:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Kritisk:</strong>&nbsp;&nbsp;Operativsystemet på SecureDrop-serverne deres går nå ut på dato. En manuell oppdatering er nødvendig for å på nytt aktivere brukergrensesnittet for kilder, og fortsatt være sikker. Kontakt administratoren for SecureDrop i din organisasjon. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Ler mer</a>"
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Viktig:</strong>&nbsp;&nbsp;Deres SecureDrop-server trenger manuelt ettersyn for å løse problemer som hindrer automatisk oppdatering til neste versjon av operativsystemet. Kontakt administratoren av SecureDrop i din organisasjon. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Lær mer</a>"
+
 msgid "Navigation"
 msgstr "Navigasjon"
 
@@ -711,8 +718,8 @@ msgstr "Meldinger"
 msgid "Date"
 msgstr "Dato"
 
-msgid "There are no submissions!"
-msgstr "Det er ingen innsendelser!"
+msgid "There are no submissions."
+msgstr "Det er ingen innsendelser."
 
 msgid "Filter by codename"
 msgstr "Filtrer etter kodenavn"
@@ -1046,8 +1053,8 @@ msgstr "Om noen følger med på internettbruken din &mdash; som myndigheter, int
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Alltid bruk Tor-nettleseren(<code>{}</code>) for å bruke SecureDrop. Riktige SecureDrop-addresser slutter på <code>.onion</code>. Den riktige adressen for denne SecureDrop-siden er:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Om du allerede bruker Tor-nettleseren, kopier adressen over og generer en ny identitet før du besøker SecureDrop."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr "Hvis du allerede bruker Tor-nettleseren, kopier adressen over og klikk på Tor-nettleserens knapp merket <strong>New Identity/Ny identitet</strong> før du kobler deg til SecureDrop."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Om det er grunn til å tro at det er risiko for at internett-trafikken din blir overvåket, vurder å koble til fra et annet sted eller et annet nettverk."
@@ -1118,6 +1125,12 @@ msgstr "<strong>Viktig:</strong> Om du ønsker å være helt anonym, <strong>ikk
 
 msgid "Back to submission page"
 msgstr "Tilbake til innsendelsesside"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Det er ingen innsendelser!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Om du allerede bruker Tor-nettleseren, kopier adressen over og generer en ny identitet før du besøker SecureDrop."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "Du ble utlogget som følge av inaktivitet. Klikk på <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Ny identitiet</b>-knappen i Tor-nettleserens verktøylinje før du fortsetter. Dette vil slette loggen over aktivitet i Tor-nettleseren på denne enheten."

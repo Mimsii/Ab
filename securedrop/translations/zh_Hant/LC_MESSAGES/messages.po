@@ -412,6 +412,12 @@ msgstr "即將完成！ 為增加此新用户，請他們依照以下指示使�
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "無法掃描條碼？您可以輸入以下雙重驗證密鑰以便手動配對 FreeOTP 和您的 SecureDrop 帳號："
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
 msgid "Navigation"
 msgstr "導覽"
 
@@ -714,8 +720,8 @@ msgstr "訊息"
 msgid "Date"
 msgstr "日期"
 
-msgid "There are no submissions!"
-msgstr "無任何提交!"
+msgid "There are no submissions."
+msgstr ""
 
 msgid "Filter by codename"
 msgstr "按代號篩選"
@@ -1048,8 +1054,8 @@ msgstr "任何網路流量監控者（如政府、網路服務業者、代理服
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "請務必使用 Tor 瀏覽器 (<code>{}</code>) 來存取 SecureDrop。有效的 SecureDrop 網址都以 <code>.onion</code> 結尾。本網站正確的網址為："
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "若已使用 Tor 瀏覽器，請複製上方網址以自動產生新的身份連線到 SecureDrop 。"
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr ""
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "如合理懷疑自己受到網路監控，請考慮從別的地點或其它網路上網。"
@@ -1120,6 +1126,12 @@ msgstr "<strong>重要：</strong>如果您希望保持匿名，<strong>請勿</
 
 msgid "Back to submission page"
 msgstr "返回提交文件頁面"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "無任何提交!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "若已使用 Tor 瀏覽器，請複製上方網址以自動產生新的身份連線到 SecureDrop 。"
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "因聞置過久已遭系統登出，可先點擊 Tor 瀏覽器工具列<img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b>按鍵來清除此設備上的瀏覽記錄。"

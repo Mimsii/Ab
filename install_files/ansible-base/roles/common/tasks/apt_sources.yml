@@ -1,9 +1,33 @@
-- name: Configure apt sources.
+- name: Configure apt sources.list
   template:
     src: sources.list.j2
     dest: /etc/apt/sources.list
     mode: "0644"
     owner: root
+  when: ansible_distribution_release == "focal"
+  notify: update apt cache
+  tags:
+    - apt
+
+- name: Configure apt ubuntu.sources
+  template:
+    src: ubuntu.sources.j2
+    dest: /etc/apt/sources.list.d/ubuntu.sources
+    mode: "0644"
+    owner: root
+  when: ansible_distribution_release != "focal"
+  notify: update apt cache
+  tags:
+    - apt
+
+# Remove the obsolete sources.list on noble. On a fresh install,
+# this is an empty file with a comment pointing to ubuntu.sources.
+# On upgrade from focal, we're deleting this file.
+- name: Remove obsolete sources.list (noble)
+  template:
+    dest: /etc/apt/sources.list
+    state: absent
+  when: ansible_distribution_release != "focal"
   notify: update apt cache
   tags:
     - apt

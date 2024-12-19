@@ -13,18 +13,6 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
-function service_exists() {
-    # Test for the existence of systemctl services. Added to check for and
-    # disable haveged if present
-
-    local x=$1
-    if systemctl list-unit-files --type service | grep -F "${x}.service"; then
-        return 0
-    else
-        return 1
-    fi
-}
-
 function permanently_disable_swap() {
     # Swap usage is prohibited in the context of SecureDrop, due to risk of
     # forensic discovery recovering plaintext submissions that were written
@@ -106,12 +94,6 @@ case "$1" in
       permanently_disable_swap
       convert_document_to_journalist_interface
       migrate_custom_logo
-
-      if service_exists 'haveged'; then
-        systemctl stop haveged
-        systemctl disable haveged
-        systemctl mask haveged
-      fi
 
     ;;
 

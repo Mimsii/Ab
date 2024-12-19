@@ -21,22 +21,21 @@ import pytest
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from tests.functional.app_navigators.journalist_app_nav import JournalistAppNavigator
-from tests.functional.pageslayout.utils import list_locales, save_static_data
+from tests.functional.pageslayout.utils import save_static_data
 
 
-@pytest.mark.parametrize("locale", list_locales())
 @pytest.mark.pagelayout
 class TestJournalistLayoutAccount:
     def test_account_edit_and_set_hotp_secret(
-        self, locale, sd_servers_with_clean_state, firefox_web_driver
+        self, sd_servers_with_clean_state, firefox_web_driver
     ):
         # Given an SD server
         # And a journalist logging into the journalist interface
-        locale_with_commas = locale.replace("_", "-")
+        locale = firefox_web_driver.locale
         journ_app_nav = JournalistAppNavigator(
             journalist_app_base_url=sd_servers_with_clean_state.journalist_app_base_url,
             web_driver=firefox_web_driver,
-            accept_languages=locale_with_commas,
+            accept_languages=locale,
         )
         journ_app_nav.journalist_logs_in(
             username=sd_servers_with_clean_state.journalist_username,
@@ -87,7 +86,7 @@ class TestJournalistLayoutAccount:
             explanatory_tooltip_opacity = explanatory_tooltip.value_of_css_property("opacity")
             assert explanatory_tooltip_opacity == "1"
 
-            if assert_tooltip_text_is:
+            if assert_tooltip_text_is and not journ_app_nav.accept_languages:
                 assert explanatory_tooltip.text == assert_tooltip_text_is
 
         journ_app_nav.nav_helper.wait_for(explanatory_tooltip_is_correct)
@@ -97,16 +96,14 @@ class TestJournalistLayoutAccount:
         alert = journ_app_nav.driver.switch_to.alert
         alert.accept()
 
-    def test_account_new_two_factor_totp(
-        self, locale, sd_servers_with_clean_state, firefox_web_driver
-    ):
+    def test_account_new_two_factor_totp(self, sd_servers_with_clean_state, firefox_web_driver):
         # Given an SD server
         # And a journalist logging into the journalist interface
-        locale_with_commas = locale.replace("_", "-")
+        locale = firefox_web_driver.locale
         journ_app_nav = JournalistAppNavigator(
             journalist_app_base_url=sd_servers_with_clean_state.journalist_app_base_url,
             web_driver=firefox_web_driver,
-            accept_languages=locale_with_commas,
+            accept_languages=locale,
         )
         journ_app_nav.journalist_logs_in(
             username=sd_servers_with_clean_state.journalist_username,

@@ -1,0 +1,7 @@
+[Unit]
+Description=Touch /var/run/reboot-required file
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/touch /var/run/reboot-required
+User=root

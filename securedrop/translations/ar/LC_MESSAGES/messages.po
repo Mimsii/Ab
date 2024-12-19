@@ -4,7 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 # Ahmad Gharbeia أحمد غربية <ahmad@gharbeia.org>, 2017.
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2024-09-24 16:33+0000\nLast-Translator: Ahmad Essam <ahmedessamdev@gmail.com>\nLanguage-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/securedrop/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 5.7.1\nGenerated-By: Babel 2.4.0\n"
+msgstr ""
+"Project-Id-Version: SecureDrop 0.3.12\n"
+"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
+"POT-Creation-Date: 2017-09-02 07:28+0000\n"
+"PO-Revision-Date: 2024-09-24 16:33+0000\n"
+"Last-Translator: Ahmad Essam <ahmedessamdev@gmail.com>\n"
+"Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/securedrop/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.7.1\n"
+"Generated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "الاسم طويلٌ جداً"
@@ -449,6 +462,12 @@ msgstr "قاربت على الانتهاء! لإتمام إضافة الحساب
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "هل عجزت عن مسح وقراءة البار كود؟ بامكانك ربط FreeOTP مع هذا الحساب عن طريق إدخال رمزي الاستيثاق التاليين في التطبيق:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
 msgid "Navigation"
 msgstr "التنقل"
 
@@ -751,8 +770,8 @@ msgstr "الرسائل"
 msgid "Date"
 msgstr "التاريخ"
 
-msgid "There are no submissions!"
-msgstr "لا يوجد تقديمات!"
+msgid "There are no submissions."
+msgstr ""
 
 msgid "Filter by codename"
 msgstr "الترشيح بالاسم الرمزي"
@@ -1090,8 +1109,8 @@ msgstr "أي شخص يراقب حركة المرور الخاصة بك على ا
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "استخدم دائمًا متصفح Tor (<code> {} </code>) للوصول إلى SecureDrop. تنتهي عناوين موقع SecureDrop الصالحة بـ <code> .onion </code>. العنوان الصحيح لهذا الموقع هو:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "إذا كنت تستخدم متصفح Tor بالفعل، فقم بنسخ العنوان أعلاه وإنشاء هوية جديدة قبل الوصول إلى SecureDrop."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr ""
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "إذا كان هناك خطر معقول من مراقبة حركة المرور على الإنترنت، ففكر في الاتصال من موقع أو شبكة مختلفة."
@@ -1162,6 +1181,12 @@ msgstr "<strong>هام:</strong> إذا كنت ترغب في البقاء مجه
 
 msgid "Back to submission page"
 msgstr "الرجوع إلى صفحة الإيداع"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "لا يوجد تقديمات!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "إذا كنت تستخدم متصفح Tor بالفعل، فقم بنسخ العنوان أعلاه وإنشاء هوية جديدة قبل الوصول إلى SecureDrop."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "لقد تم إخراجك من الحساب نظراً لعدم نشاطك. اضغط على زر <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>هوية جديدة</b>في متصفحك تور. إن ذلك سيمسح أي نشاط لك على متصفح تور في هذا الجهاز."

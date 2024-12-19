@@ -47,9 +47,9 @@
 
 {% endif %}
 
-# Block all other outbound access for users in the ssh group
+# Block all other outbound access for users in the sdssh group
 # Load before generic loopback rules
--A OUTPUT -m owner --gid-owner ssh -j LOGNDROP -m comment --comment "Drop all other outbound traffic for ssh user"
+-A OUTPUT -m owner --gid-owner sdssh -j LOGNDROP -m comment --comment "Drop all other outbound traffic for ssh user"
 
 # DNS rules
 {% for address in dns_server -%}

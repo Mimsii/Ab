@@ -20,7 +20,7 @@ def test_app_iptables_rules(host):
         tor_user_id=host.check_output("id -u debian-tor"),
         time_service_user=host.check_output("id -u systemd-timesync"),
         securedrop_user_id=host.check_output("id -u www-data"),
-        ssh_group_gid=host.check_output("getent group ssh | cut -d: -f3"),
+        ssh_group_gid=host.check_output("getent group sdssh | cut -d: -f3"),
         dns_server=securedrop_test_vars.dns_server,
     )
 

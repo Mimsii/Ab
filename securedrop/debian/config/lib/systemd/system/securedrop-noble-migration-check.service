@@ -1,0 +1,7 @@
+[Unit]
+Description=Check noble migration readiness
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/securedrop-noble-migration-check
+User=root

@@ -431,6 +431,12 @@ msgstr "Beveik baigta! Norėdami baigti pridėti naują vartotoją, paprašykite
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Negalite nuskaityti brūkšninio kodo? Tuomet rankiniu būdu galite susieti „FreeOTP“ su šia paskyra, į programėlę įvesdami šią dviejų veiksnių paslaptį:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
 msgid "Navigation"
 msgstr ""
 
@@ -723,7 +729,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-msgid "There are no submissions!"
+msgid "There are no submissions."
 msgstr ""
 
 msgid "Filter by codename"
@@ -1059,7 +1065,7 @@ msgstr ""
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr ""
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
 msgstr ""
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."

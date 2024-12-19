@@ -25,11 +25,10 @@ from tests.functional.pageslayout.utils import list_locales, save_static_data
 class TestSourceLayout:
     def test(self, locale, sd_servers_with_clean_state, tor_browser_web_driver):
         # Given a source user accessing the app from their browser
-        locale_with_commas = locale.replace("_", "-")
         source_app_nav = SourceAppNavigator(
             source_app_base_url=sd_servers_with_clean_state.source_app_base_url,
             web_driver=tor_browser_web_driver,
-            accept_languages=locale_with_commas,
+            accept_languages=locale,
         )
 
         # And they created an account

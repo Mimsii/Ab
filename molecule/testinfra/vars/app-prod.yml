@@ -18,8 +18,6 @@ apparmor_enforce:
     - "/usr/sbin/apache2//HANDLING_UNTRUSTED_INPUT"
     - "/usr/sbin/tor"
 
-apparmor_complain: []
-
 # No source-error.log allowed in prod
 allowed_apache_logfiles:
   - /var/log/apache2/access.log

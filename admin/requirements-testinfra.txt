@@ -210,9 +210,9 @@ packaging==21.3 \
     #   -r requirements-ansible.in
     #   ansible-core
     #   pytest
-paramiko==2.7.2 \
-    --hash=sha256:4f3e316fef2ac628b05097a637af35685183111d4bc1b5979bd397c2ab7b5898 \
-    --hash=sha256:7f36f4ba2c0d81d219f4595e35f70d56cc94f9ac40a6acdf51d6ca210ce65035
+paramiko==2.10.6 \
+    --hash=sha256:02f07596062e4a81eacef10f9608d9a05f6f2485e50a1c3865ccf7b3b04138ad \
+    --hash=sha256:faac4820a3173997c378da74b72e832b1ff075ea1a4ee3c0ba048aa30ee49cf1
     # via -r requirements-testinfra.in
 pluggy==1.4.0 \
     --hash=sha256:7db9f7b503d67d1c5b95f59773ebb58a8c1c288129a88665838012cfb07b8981 \

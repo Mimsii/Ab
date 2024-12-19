@@ -13,11 +13,18 @@
     - users
     - sudoers
 
+- name: Create "sdssh" group (for limiting SSH access)
+  group:
+    name: sdssh
+    state: present
+  tags:
+    - users
+
 - name: Create shell accounts for SecureDrop admins.
   user:
     name: "{{ item }}"
     shell: /bin/bash
-    groups: sudo,ssh
+    groups: sudo,sdssh
   with_items: "{{ ssh_users }}"
   tags:
     - users

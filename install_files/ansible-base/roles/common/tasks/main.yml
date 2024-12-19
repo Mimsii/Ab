@@ -1,6 +1,4 @@
 ---
-- include_vars: "{{ ansible_distribution }}_{{ ansible_distribution_release }}.yml"
-
 - include_tasks: apt_sources.yml
 
 - include_tasks: apt_upgrade.yml
@@ -21,8 +19,6 @@
     - reboot
 
 - include_tasks: remove_unused_packages.yml
-
-- include_tasks: sysctl.yml
 
 - include_tasks: disable_swap.yml
 

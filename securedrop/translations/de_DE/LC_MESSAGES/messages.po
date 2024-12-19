@@ -1,18 +1,5 @@
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2024-01-14 13:30+0000\n"
-"Last-Translator: Curtis Baltimore <curtisbaltimore@protonmail.com>\n"
-"Language-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\n"
-"Language: de_DE\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.3.1\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2024-12-15 12:33+0000\nLast-Translator: Curtis Baltimore <curtisbaltimore@protonmail.com>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.8.4\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Name zu lang"
@@ -32,7 +19,7 @@ msgid "{time} ago"
 msgstr "vor {time}"
 
 msgid "You have been logged out due to inactivity or a problem with your session."
-msgstr ""
+msgstr "Du wurdest aufgrund von Inaktivität oder einem Problem mit deiner Sitzung abgemeldet."
 
 msgid "SecureDrop"
 msgstr "SecureDrop"
@@ -370,7 +357,7 @@ msgid "No users to display"
 msgstr "Keine Benutzer anzuzeigen"
 
 msgid "Update instance configuration"
-msgstr ""
+msgstr "Konfiguration der Instanz aktualisieren"
 
 msgid "INSTANCE CONFIG"
 msgstr "INSTANZKONFIGURATION"
@@ -417,6 +404,12 @@ msgstr "Sie sind fast fertig! Um das Hinzufügen dieses neuen Nutzers abzuschlie
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Können Sie den Barcode nicht scannen? Um FreeOTP manuell mit diesem Konto zu verbinden, geben Sie den folgenden Zwei-Faktor-Schlüssel in die App ein:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Kritisch:</strong>&nbsp;&nbsp;Das von deinen SecureDrop-Servern verwendete Betriebssystem hat das Ende seines Lebenszyklus erreicht. Ein manuelles Update ist erforderlich, um die Quellcode-Schnittstelle wieder zu aktivieren und sicher zu bleiben. Bitte kontaktiere deinen Administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Mehr erfahren</a>"
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr "<strong>Wichtig:</strong>&nbsp;&nbsp;Dein SecureDrop-Server muss manuell überprüft werden, um Probleme zu beheben, die ein automatisches Upgrade auf die nächste Betriebssystemversion verhindern. Bitte kontaktiere deinen Adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Mehr erfahren</a>"
+
 msgid "Navigation"
 msgstr "Navigation"
 
@@ -433,7 +426,7 @@ msgid "Log Out"
 msgstr "Abmelden"
 
 msgid "Return to All Sources"
-msgstr ""
+msgstr "Zurück zu Alle Quellen"
 
 msgid "Powered by <b>SecureDrop {version}</b>."
 msgstr "Ermöglicht von <b>SecureDrop {version}</b>."
@@ -448,13 +441,13 @@ msgid "All messages, files, and replies from sources are stored as encrypted fil
 msgstr "Alle Nachrichten, Dateien und Antworten von Quellen werden aus Sicherheitsgründen als verschlüsselte Dateien gespeichert. Damit Sie sie lesen können, müssen Sie sie auf Ihrer Sicheren Ansichtsstation entschlüsseln."
 
 msgid "Download Selected Files"
-msgstr ""
+msgstr "Ausgewählte Dateien herunterladen"
 
 msgid "Download Selected"
 msgstr "Herunterladen ausgewählt"
 
 msgid "Delete Selected Files"
-msgstr ""
+msgstr "Ausgewählte Dateien löschen"
 
 msgid "Delete Selected"
 msgstr "Löschen ausgewählt"
@@ -684,25 +677,25 @@ msgid "Reset Security Key Credentials"
 msgstr "Sicherheitsschlüssel-Anmeldeinformationen zurücksetzen"
 
 msgid "Download Selected Unread Submissions"
-msgstr ""
+msgstr "Ausgewählte ungelesene Einreichungen herunterladen"
 
 msgid "Download Unread"
 msgstr "Ungelesene herunterladen"
 
 msgid "Download Selected Submissions"
-msgstr ""
+msgstr "Ausgewählte Einreichungen herunterladen"
 
 msgid "Download"
 msgstr "Herunterladen"
 
 msgid "Star Selected Submissions"
-msgstr ""
+msgstr "Ausgewählte Einreichungen mit Sternchen"
 
 msgid "Star"
 msgstr "Markieren"
 
 msgid "Un-star Selected Submissions"
-msgstr ""
+msgstr "Ausgewählte Einreichungen ohne Sternchen"
 
 msgid "Un-star"
 msgstr "Markieren rückgängig machen"
@@ -719,8 +712,8 @@ msgstr "Nachrichten"
 msgid "Date"
 msgstr "Datum"
 
-msgid "There are no submissions!"
-msgstr "Es gibt keine Einreichungen!"
+msgid "There are no submissions."
+msgstr "Es gibt keine Einreichungen."
 
 msgid "Filter by codename"
 msgstr "Nach Deckname filtern"
@@ -756,7 +749,7 @@ msgid "Show password"
 msgstr "Passwort anzeigen"
 
 msgid "Log In to Journalist Interface"
-msgstr ""
+msgstr "Anmelden bei Journalist Interface"
 
 msgid "LOG IN"
 msgstr "ANMELDEN"
@@ -833,7 +826,7 @@ msgid "Important"
 msgstr "Wichtig"
 
 msgid "You have been logged out due to inactivity or a problem with your session. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr ""
+msgstr "Du wurdest aufgrund von Inaktivität oder einem Problem mit deiner Sitzung abgemeldet. Klicke auf die Schaltfläche <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Neue Identität</b> in der Symbolleiste deines Tor-Browsers, bevor du weitermachst. Dadurch werden die Aktivitätsdaten deines Tor-Browsers auf diesem Gerät gelöscht."
 
 msgid "Protecting Journalists and Sources"
 msgstr "Schützt Journalisten und Quellen"
@@ -842,10 +835,10 @@ msgid "Skip to notification"
 msgstr "Zur Benachrichtigung springen"
 
 msgid "Return to Submission Page"
-msgstr ""
+msgstr "Zurück zur Einreichungsseite"
 
 msgid "Return to Home Page"
-msgstr ""
+msgstr "Zurück zur Startseite"
 
 msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Es tut uns leid, unser SecureDrop ist derzeit offline."
@@ -890,7 +883,7 @@ msgid "<strong>Keep it safe.</strong> There is no account recovery option."
 msgstr "<strong>Bewahren Sie es sicher auf.</strong> Es gibt keine Option zur Wiederherstellung des Kontos."
 
 msgid "Continue to Submission Page"
-msgstr ""
+msgstr "Weiter zur Einreichungsseite"
 
 msgid "Welcome"
 msgstr "Willkommen"
@@ -917,7 +910,7 @@ msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</stron
 msgstr "<strong>Es wird empfohlen, für den Zugriff auf SecureDrop den Tor-Browser zu verwenden:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Erfahren Sie, wie Sie ihn installieren</a> oder ignorieren Sie diese Warnung, um fortzufahren."
 
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a class=\"recommend-tor\" aria-label=\"Learn how to install Tor Browser\" href=\"{tor_browser_url}\" >Learn how to install it</a>, or ignore this warning to continue."
-msgstr ""
+msgstr "<strong>Es wird empfohlen, die Desktop-Version des Tor-Browsers für den Zugang zu SecureDrop zu verwenden, da Orfox nicht das gleiche Maß an Sicherheit und Anonymität bietet wie die Desktop-Version.</strong> <a class=\"recommend-tor\" aria-label=\"Learn how to install Tor Browser\" href=\"{tor_browser_url}\" >Erfahre, wie man es installiert</a>, oder ignoriere diese Warnung, um fortzufahren."
 
 msgid "{} logo"
 msgstr "{} Logo"
@@ -929,7 +922,7 @@ msgid "First time submitting to our SecureDrop? Start here."
 msgstr "Erstmalige Einreichung bei unserem SecureDrop? Beginnen Sie hier."
 
 msgid "Get Started With Your First Submission"
-msgstr ""
+msgstr "Beginne mit deiner ersten Einreichung"
 
 msgid "GET STARTED"
 msgstr "ERSTE SCHRITTE"
@@ -941,7 +934,7 @@ msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Haben Sie bereits einen Decknamen? Schauen Sie nach Antworten oder reichen Sie etwas Neues ein."
 
 msgid "Log In Using Your Codename"
-msgstr ""
+msgstr "Anmelden mit Deinem Decknamen"
 
 msgid "Log in"
 msgstr "Anmeldung"
@@ -953,7 +946,7 @@ msgid "Enter your codename"
 msgstr "Geben Sie Ihren Decknamen ein"
 
 msgid "Cancel and Return to Previous Page"
-msgstr ""
+msgstr "Abbrechen und zurück zur vorherigen Seite"
 
 msgid "CANCEL"
 msgstr "ABBRECHEN"
@@ -962,7 +955,7 @@ msgid "Additional Action Required"
 msgstr "Zusätzliche Maßnahmen erforderlich"
 
 msgid "Log Back In"
-msgstr ""
+msgstr "Wieder anmelden"
 
 msgid "One more thing..."
 msgstr "Eine Sache noch..."
@@ -998,10 +991,10 @@ msgid "Anti-spam check. Do not fill this in!"
 msgstr "Anti-Spam-Test. Bitte nichts eintragen!"
 
 msgid "Cancel and Clear Uploaded Content"
-msgstr ""
+msgstr "Hochgeladene Inhalte widerrufen und löschen"
 
 msgid "Submit Uploaded Content"
-msgstr ""
+msgstr "Hochgeladene Inhalte einreichen"
 
 msgid "Read Replies"
 msgstr "Antworten lesen"
@@ -1016,7 +1009,7 @@ msgid "Delete reply from {timestamp}?"
 msgstr "Antwort von {timestamp} löschen?"
 
 msgid "Delete Reply"
-msgstr ""
+msgstr "Antwort löschen"
 
 msgid "Delete All Replies"
 msgstr "Alle Antworten löschen"
@@ -1054,8 +1047,8 @@ msgstr "Jeder, der Ihren Internetverkehr überwacht, einschließlich Ihrer Regie
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Nutzen Sie immer den Tor Browser (<code>{}</code>), um auf SecureDrop zuzugreifen. Gültige SecureDrop-Webadressen enden mit <code>.onion</code>. Die korrekte Adresse für diese Seite lautet:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Wenn Sie bereits den Tor-Browser benutzen, kopieren Sie die obige Adresse und erstellen Sie eine neue Identität, bevor Sie auf SecureDrop zugreifen."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr "Wenn du bereits den Tor-Browser benutzt, kopiere die obige Adresse und klicke auf die Schaltfläche <strong>Neue Identität</strong>, bevor du SecureDrop aufrufst."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Wenn die Gefahr besteht, dass Ihr Internetverkehr überwacht wird, sollten Sie sich von einem anderen Standort oder Netzwerk aus verbinden."
@@ -1082,7 +1075,7 @@ msgid "Codename"
 msgstr "Deckname"
 
 msgid "Reveal Codename"
-msgstr ""
+msgstr "Deckname aufdecken"
 
 msgid "Show Codename"
 msgstr "Deckname anzeigen"
@@ -1126,6 +1119,12 @@ msgstr "<strong>Wichtig:</strong> Verwenden Sie <strong>nicht</strong> GPG, um d
 
 msgid "Back to submission page"
 msgstr "Zurück zur Einreichungsseite"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Es gibt keine Einreichungen!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Wenn Sie bereits den Tor-Browser benutzen, kopieren Sie die obige Adresse und erstellen Sie eine neue Identität, bevor Sie auf SecureDrop zugreifen."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "Sie wurden wegen Inaktivität abgemeldet. Klicken Sie auf die Schaltfläche <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Neue Identität</b> in der Werkzeugleiste Ihres Tor-Browsers bevor Sie weitermachen. Dies löscht Ihre Tor-Browser-Aktivitätsdaten auf diesem Gerät."

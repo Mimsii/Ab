@@ -63,22 +63,6 @@ def test_apparmor_ensure_not_disabled(host, profile):
         assert not f.exists
 
 
-@pytest.mark.parametrize("complain_pkg", sdvars.apparmor_complain)
-def test_app_apparmor_complain(host, complain_pkg):
-    """Ensure app-armor profiles are in complain mode for staging"""
-    with host.sudo():
-        awk = "awk '/[0-9]+ profiles.*complain." "/{flag=1;next}/^[0-9]+.*/{flag=0}flag'"
-        c = host.check_output(f"aa-status | {awk}")
-        assert complain_pkg in c
-
-
-def test_app_apparmor_complain_count(host):
-    """Ensure right number of app-armor profiles are in complain mode"""
-    with host.sudo():
-        c = host.check_output("aa-status --complaining")
-        assert c == str(len(sdvars.apparmor_complain))
-
-
 @pytest.mark.parametrize("aa_enforced", sdvars.apparmor_enforce_actual)
 def test_apparmor_enforced(host, aa_enforced):
     awk = "awk '/[0-9]+ profiles.*enforce./" "{flag=1;next}/^[0-9]+.*/{flag=0}flag'"
@@ -91,7 +75,7 @@ def test_apparmor_total_profiles(host):
     """Ensure number of total profiles is sum of enforced and
     complaining profiles"""
     with host.sudo():
-        total_expected = len(sdvars.apparmor_enforce) + len(sdvars.apparmor_complain)
+        total_expected = len(sdvars.apparmor_enforce)
         assert int(host.check_output("aa-status --profiled")) >= total_expected
 
 

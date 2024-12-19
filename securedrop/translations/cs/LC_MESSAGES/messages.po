@@ -431,6 +431,12 @@ msgstr "Máte skoro hotovo! Abyste tohoto uživatele mohli přidat, postupujte p
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Nemůžete načíst čárový kód? Můžete manuálně spárovat FreeOTP s tímto účtem, stačí zadat následující dvoufaktorové heslo do aplikace:"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
 msgid "Navigation"
 msgstr "Navigace"
 
@@ -733,8 +739,8 @@ msgstr "Zprávy"
 msgid "Date"
 msgstr "Datum"
 
-msgid "There are no submissions!"
-msgstr "Nejsou tu žádná podání!"
+msgid "There are no submissions."
+msgstr ""
 
 msgid "Filter by codename"
 msgstr "Filtrovat podle krycího jména"
@@ -1069,8 +1075,8 @@ msgstr "Kdokoliv, kdo sleduje vaši aktivitu na internetu &mdash; včetně vlád
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Vždy používejte Tor Browser (<code>{}</code>) pro přístup k SecureDrop. Platná adresa SecureDrop stránky končí <code>.onion</code>. Správná adresa této stránky je:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Pokud již používáte Tor Browser, zkopírujte adresu výše a vygenerujte novou identitu před přístupem na SecureDrop."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr ""
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Pokud máte důvod se domnívat, že váš internetový provoz je monitorován, zvažte připojení z jiné lokality nebo jiné sítě."
@@ -1141,6 +1147,12 @@ msgstr "<strong>Důležité:</strong> Chcete-li zůstat v anonymitě, <strong>ne
 
 msgid "Back to submission page"
 msgstr "Zpátky na stránku podání"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Nejsou tu žádná podání!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Pokud již používáte Tor Browser, zkopírujte adresu výše a vygenerujte novou identitu před přístupem na SecureDrop."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "Z důvodu neaktivity jste byli odhlášeni. Než budete pokračovat, klepněte na <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nová identita</b> na liště svého prohlížeče Tor. Smažete tím data o aktivitě Toru na tomto zařízení."

@@ -421,6 +421,12 @@ msgstr "Está quase a terminar! Para finalizar a criação deste novo utilizador
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Não consegue ler o código QR? Pode adicionar a sua conta SecureDrop manualmente na aplicação móvel FreeOTP inserindo o seguinte código secreto de dois fatores (2FA):"
 
+msgid "<strong>Critical:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+msgid "<strong>Important:</strong>&nbsp;&nbsp;Your SecureDrop server needs manual attention to resolve issues blocking automatic upgrade to the next operating-system version. Please contact your adminstrator. <a href=\"https://securedrop.org/focal-eol\" rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
 msgid "Navigation"
 msgstr "Menu de navegação"
 
@@ -723,8 +729,8 @@ msgstr "Mensagens"
 msgid "Date"
 msgstr "Data"
 
-msgid "There are no submissions!"
-msgstr "Ainda nada foi submetido!"
+msgid "There are no submissions."
+msgstr ""
 
 msgid "Filter by codename"
 msgstr "Filtrar por nome-código"
@@ -1058,8 +1064,8 @@ msgstr "Qualquer entidade ou pessoa que possa inspecionar a sua atividade na Int
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Use sempre o Navegador Tor (<code>{}</code>) para aceder ao SecureDrop. Os endereços válidos para o site SecureDrop terminam em <code>.onion</code>. O endereço correto para este site é:"
 
-msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "Caso esteja a utilizar o Navegador Tor, copie o endereço acima e gere uma nova identidade antes de aceder ao SecureDrop."
+msgid "If you are already using Tor Browser, copy the address above and click Tor Browser's <strong>New Identity</strong> button before you access SecureDrop."
+msgstr ""
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Se houver um risco significativo da sua atividade na Internet estar a ser vigiada, considere conectar-se de um local ou rede diferente."
@@ -1130,6 +1136,12 @@ msgstr "<strong>Importante:</strong> para manter o seu anonimato, <strong>não</
 
 msgid "Back to submission page"
 msgstr "Voltar à página de envio"
+
+#~ msgid "There are no submissions!"
+#~ msgstr "Ainda nada foi submetido!"
+
+#~ msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
+#~ msgstr "Caso esteja a utilizar o Navegador Tor, copie o endereço acima e gere uma nova identidade antes de aceder ao SecureDrop."
 
 #~ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 #~ msgstr "A sua sessão terminou por inatividade. Clique no botão <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nova identidade (PT) / New Identity (EN)</b> na barra de ferramentas do Navegador Tor antes de continuar. Assim, os dados da sua atividade no Navegador Tor serão eliminados deste dispositivo."

@@ -41,10 +41,9 @@ class TestSourceAppSessionTimeout:
     def test_source_session_timeout(self, locale, sd_servers_with_short_timeout):
         # Given an SD server with a very short session timeout
         # And a source user accessing the source app from their browser
-        locale_with_commas = locale.replace("_", "-")
         with SourceAppNavigator.using_tor_browser_web_driver(
             source_app_base_url=sd_servers_with_short_timeout.source_app_base_url,
-            accept_languages=locale_with_commas,
+            accept_languages=locale,
         ) as navigator:
             # And they're logged in and are using the app
             navigator.source_visits_source_homepage()
