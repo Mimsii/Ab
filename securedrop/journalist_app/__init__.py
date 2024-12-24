@@ -20,8 +20,6 @@ from werkzeug.exceptions import HTTPException, default_exceptions
 
 _insecure_views = ["main.login", "static"]
 _insecure_api_views = ["api.get_token", "api.get_endpoints"]
-# Timezone-naive datetime format expected by SecureDrop Client
-API_DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
 
 def get_logo_url(app: Flask) -> str:
@@ -67,7 +65,7 @@ def create_app(config: SecureDropConfig) -> Flask:
 
         def default(self, obj: "Any") -> "Any":
             if isinstance(obj, datetime):
-                return obj.strftime(API_DATETIME_FORMAT)
+                return obj.isoformat()
             super().default(obj)
 
     app.json_encoder = JSONEncoder

@@ -1,6 +1,88 @@
 # Changelog
 
-## 2.11.0~rc1
+## 2.12.0~rc1
+
+
+
+## 2.11.1
+
+* Modify the `securedrop-noble-migration-check` program to avoid triggering
+  spurious OSSEC alerts (#7394)
+
+## 2.11.0
+
+The main focus for this release was to prepare SecureDrop servers for upgrading
+to Ubuntu 24.04 (Noble) next year. Other maintenance changes are also included.
+
+### Ubuntu 24.04 (Noble) upgrade
+
+* Support building packages on noble (#7273, #7247, #7319)
+* Add a noble migration check script (#7334, #7363, #7369, #7378)
+* Use `Type=exec` instead of `Type=oneshot` for systemd units (#7350)
+* Make Ansible variables distro-agnostic (#7356)
+* Apply `grsec_lock` once only (#7353)
+* Stop setting `vm.heap_stack_gap` and `net.ipv4 sysctl` flags via Ansible (#7324)
+* Use `sdssh` group instead of internal-only `ssh` group for access control (#7317, #7355)
+* Add timed job to clean out old OSSEC diff and state files (#7327)
+* Remove ufw from new and existing installs (#7315, #7377)
+* Update apache config templates to be distro-agnostic (#7301)
+* Install backup script on app server via Debian package (#7331)
+* Ensure `sources.list` is absent on noble (#7342)
+* Overwrite `sources.list.d/ubuntu.sources` on noble (#7307)
+
+### Web applications
+
+* Add a banner in the Journalist Interface, in preparation for the noble migration (#7348)
+* Use `sqlalchemy.LargeBinary` instead of deprecated `Binary` (#7264)
+* Upgrade sequoia-openpgp from 1.21.1 to 1.21.2 (#7248)
+* Import escape from markupsafe, not flask (#7252)
+* Update UI strings based on translator feedback (#7370)
+* Ignore safety alerts:
+  * ignore Safety 73711 in cryptography (#7339)
+  * ignore Safety 73889, 73969 in werkzeug (#7361)
+
+### Operations
+
+* Regenerate Redis password on restoring from server backup (#7328)
+* Replace reboot-flag cron job with a systemd timer (#7337)
+* Remove haveged package, if installed (#7335, 7341)
+* Don't install apt-transport-https transitional package (#7303)
+* Remove unused Ansible `restrict_direct_access_{app,mon}` roles (#7302)
+* Remove unused Ansible `sysctl_flags_ipv6 variables` (#7300)
+* Prompt `sdadmin` for the default SSH username (#7309)
+* Remove unused `load_iptables` script (#7282)
+* Remove unused SSHd config from cloud-init (#7318)
+* Remove stray Ubuntu file `/etc/apt/apt.conf.d/zzzz-temp-installer-unattended-upgrade` if it exists (#7380)
+
+### Development and CI
+
+* Publish versions of packages with debug symbols (#7347, #7365)
+* Preserve screenshots from translation test CI job (#7240)
+* Make `backport.py` more flexible for complex pull requests (#7260)
+* Install xz-utils in diffoscope CI job (#7344)
+* Don't return `True` from `test_swap_disabled` for monitor server, skip test instead (#7320)
+* Run admin CI tests on bookworm (#7212)
+* Use a single pass in ansible to install local packages (#7261)
+* Upgrade tbselenium from 0.8.1 to 0.9.0 (#7274, #7271)
+* Update geckodriver from 0.33.0 to 0.35.0 (#7268)
+* Standardize git message formats in version updater (#7263)
+* Speed up `update-python3-dependencies` Makefile target using uv (#7234)
+* Upgrade ruff, remove black, add ruff formatting fixes (#7233, #7246)
+* Remove unused `devops/scripts/aws-jenkins-venv.sh` (#7238)
+* Ignore safety alerts:
+  * Ignore CVE-2024-8775 in ansible-core (#7269)
+* Update dependencies:
+  * Upgrade cargo-vet from 0.9.0 to 0.10.0 (#7343)
+  * Upgrade Rust toolchain from 1.78.0 to 1.81.0 (#7232)
+
+#### In support of Ubuntu 24.04 (Noble) upgrade
+
+* Support noble dev environment (#7249)
+* Run basic lint CI against Ubuntu noble and Python 3.12 (#7242)
+* Remove tests checking that no apparmor profiles are complaining (#7308)
+* Remove `test_securedrop_application_apt_dependencies` test (#7305)
+* Inspect `grsec_lock` as root in testinfra (#7304)
+* Upgrade paramiko from 2.7.2 to 2.10.6 (#7280, #7321)
 
 ## 2.10.1
 
@@ -54,7 +136,7 @@ our [blog post](https://securedrop.org/news/securedrop-2_10_0-released/) for mor
 
 ### Development
 * Updated rust toolchain to version 1.78.0 (#7147)
-* Added random file generation in loaddata.py (#7161) 
+* Added random file generation in loaddata.py (#7161)
 * Fixed loaddata.py date generation bug (#7156)
 * Updated test signing key (#7150)
 * Added persistence for onion addresses created with `make dev-tor` (#7124)
@@ -313,7 +395,7 @@ our [blog post](https://securedrop.org/news/securedrop-2_10_0-released/) for mor
 
 ### CI
 
-* Added exclusions for 2 irrelevant safety db entries (#6473, #6477) 
+* Added exclusions for 2 irrelevant safety db entries (#6473, #6477)
 
 ## 2.4.0
 
@@ -351,7 +433,7 @@ our [blog post](https://securedrop.org/news/securedrop-2_10_0-released/) for mor
 ### CI
 
 * Removed logic to fetch Tor packages in nightly build (#6349)
-* Replaced codecov Bash uploader with binary uploader (#6416) 
+* Replaced codecov Bash uploader with binary uploader (#6416)
 * Updated CircleCI to use Python 3.8 image, GCE to use Debian 11 (bullseye) base image (#6431)
 
 ## 2.3.2
@@ -586,7 +668,7 @@ our [blog post](https://securedrop.org/news/securedrop-2_10_0-released/) for mor
 
 * Provide end-of-life messaging and disable source interface after Xenial End-of-life (#5789)
 * Adds safe deletion functionality to the Journalist Interface (#5770, #5827)
-* source\_app.utils.normalizer\_timestamps will no longer create an empty file (#5724)
+* source_app.utils.normalizer_timestamps will no longer create an empty file (#5724)
 
 ### Operations
 
@@ -1035,7 +1117,7 @@ our [blog post](https://securedrop.org/news/securedrop-2_10_0-released/) for mor
 * Added support for asynchronous jobs in dev container (#4392)
 * Updated Qubes staging environment to use Xenial by default (#4344, #4228)
 * Updated dev environment to use Xenial by default (#4213)
-* Fixed Dockerfile apt caching error, fixed error in create\_dev\_data.py (#4353)
+* Fixed Dockerfile apt caching error, fixed error in create_dev_data.py (#4353)
 * Added support for use of VNC during functional tests (#4288, #4324)
 * Added support for staging-specific data to create-dev-data.py (#4298)
 * Removed firefox and other packages from app-test Ansible role (#4277)

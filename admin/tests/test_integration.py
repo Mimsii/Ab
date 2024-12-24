@@ -650,7 +650,7 @@ def test_update_fails_when_no_signature_present(securedrop_git_repo):
     child = pexpect.spawn(f"coverage run {cmd} --root {ansible_base} update")
     output = child.read()
     assert b"Updated to SecureDrop" not in output
-    assert b"Signature verification failed" in output
+    assert b"Update failed: Missing or invalid signature" in output
 
     child.expect(pexpect.EOF, timeout=10)  # Wait for CLI to exit
     child.close()
@@ -682,7 +682,7 @@ def test_update_with_duplicate_branch_and_tag(securedrop_git_repo):
     # Verify that we do not falsely check out a branch instead of a tag.
     assert b"Switched to branch" not in output
     assert b"Updated to SecureDrop" not in output
-    assert b"Signature verification failed" in output
+    assert b"Update failed: Branch name collision detected" in output
 
     child.expect(pexpect.EOF, timeout=10)  # Wait for CLI to exit
     child.close()

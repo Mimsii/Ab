@@ -385,7 +385,7 @@ class TestSecureDropAdmin:
                 with mock.patch("subprocess.check_output", return_value=git_output):
                     ret_code = securedrop_admin.update(args)
                     assert "Applying SecureDrop updates..." in caplog.text
-                    assert "Signature verification failed." in caplog.text
+                    assert "Update failed: Invalid signature format" in caplog.text
                     assert "Updated to SecureDrop" not in caplog.text
                     assert ret_code != 0
 
@@ -406,7 +406,7 @@ class TestSecureDropAdmin:
                 with mock.patch("subprocess.check_output", return_value=git_output):
                     ret_code = securedrop_admin.update(args)
                     assert "Applying SecureDrop updates..." in caplog.text
-                    assert "Signature verification failed." in caplog.text
+                    assert "Update failed: Invalid signature format" in caplog.text
                     assert "Updated to SecureDrop" not in caplog.text
                     assert ret_code != 0
 
@@ -428,7 +428,7 @@ class TestSecureDropAdmin:
                 with mock.patch("subprocess.check_output", return_value=git_output):
                     ret_code = securedrop_admin.update(args)
                     assert "Applying SecureDrop updates..." in caplog.text
-                    assert "Signature verification failed." in caplog.text
+                    assert "Update failed: Invalid signature format" in caplog.text
                     assert "Updated to SecureDrop" not in caplog.text
                     assert ret_code != 0
 
@@ -451,7 +451,7 @@ class TestSecureDropAdmin:
                 with mock.patch("subprocess.check_output", return_value=git_output):
                     ret_code = securedrop_admin.update(args)
                     assert "Applying SecureDrop updates..." in caplog.text
-                    assert "Signature verification failed." in caplog.text
+                    assert "Update failed: Invalid signature format" in caplog.text
                     assert "Updated to SecureDrop" not in caplog.text
                     assert ret_code != 0
 
@@ -469,7 +469,7 @@ class TestSecureDropAdmin:
                 ):
                     ret_code = securedrop_admin.update(args)
                     assert "Applying SecureDrop updates..." in caplog.text
-                    assert "Signature verification failed." in caplog.text
+                    assert "Update failed: Missing or invalid signature" in caplog.text
                     assert "Updated to SecureDrop" not in caplog.text
                     assert ret_code != 0
 

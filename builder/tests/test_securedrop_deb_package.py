@@ -9,7 +9,11 @@ UBUNTU_VERSION = os.environ.get("UBUNTU_VERSION", "focal")
 SECUREDROP_ROOT = Path(
     subprocess.check_output(["git", "rev-parse", "--show-toplevel"]).decode().strip()
 )
-DEB_PATHS = list((SECUREDROP_ROOT / f"build/{UBUNTU_VERSION}").glob("*.deb"))
+DEB_PATHS = [
+    pkg
+    for pkg in (SECUREDROP_ROOT / f"build/{UBUNTU_VERSION}").glob("*.deb")
+    if "dbgsym" not in pkg.name
+]
 PYTHON_VERSION = {"focal": "8", "noble": "12"}[UBUNTU_VERSION]
 SITE_PACKAGES = f"/opt/venvs/securedrop-app-code/lib/python3.{PYTHON_VERSION}/site-packages"
 

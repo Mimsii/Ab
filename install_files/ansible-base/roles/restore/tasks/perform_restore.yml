@@ -138,7 +138,7 @@
     state: absent
     regexp: "^requirepass .*$"
 
-- name: Reconfigure securedrop-app-code, regenerating Redis config vi postint
+- name: Reconfigure securedrop-app-code, regenerating Redis config via postint
   command: dpkg-reconfigure securedrop-app-code
 
 - name: Reconfigure securedrop-config
